@@ -1,0 +1,12 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    long long t,a,b,i;
+    cin>>t;
+    for(i=1;i<=t;i++){ 
+        cin>>a>>b;
+        cout<<(long long) (((long long) (a/2))*((long long)(b/2)) + (a - (long long)(a/2))*(b - (long long)(b/2)))<<"\n";
+        }
+        return 0;
+    }
+
