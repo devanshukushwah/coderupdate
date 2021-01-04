@@ -12,7 +12,7 @@
 	<atom:link href="http://localhost/coderupdate/author/admin/feed/" rel="self" type="application/rss+xml" />
 	<link>http://coderupdate.com/</link>
 	<description>This site helps you to update yourself.</description>
-	<lastBuildDate>Fri, 01 Jan 2021 10:20:35 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 04 Jan 2021 09:20:39 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,279 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Data type in C</title>
+		<link>https://coderupdate.com/data-type-in-c/</link>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Mon, 04 Jan 2021 09:05:39 +0000</pubDate>
+				<category><![CDATA[programming]]></category>
+		<guid isPermaLink="false">https://coderupdate.com/?p=568</guid>
+
+					<description><![CDATA[Data type constitutes the semantics and characteristics of storage data elements. The data type can be understood as the format of the variable ( or identifier) and what kind of value they are going to hold. In general, four basic data types are widely used &#8211; char int float double We can divide data type ... <a title="Data type in C" class="read-more" href="https://coderupdate.com/data-type-in-c/" aria-label="More on Data type in C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<p>Data type constitutes the semantics and characteristics of storage data elements. The data type can be understood as the format of the variable ( or identifier) and what kind of value they are going to hold. In general, four basic data types are widely used &#8211; </p>
+
+
+
+<ul><li>char</li><li>int</li><li>float</li><li>double</li></ul>
+
+
+
+<p>We can divide data type into two categories &#8211;</p>
+
+
+
+<p><strong>Primary / Fundamental /Primitive data type &#8211; </strong>These data types are predefined in C, and can hold only one value. These data types have different size and characteristics, we will learn more about this here.</p>
+
+
+
+<p>Primitive data types are &#8211; </p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td><strong>Data type</strong></td><td><strong>Size (in bits)</strong></td><td>Description</td></tr><tr><td>char</td><td>8</td><td>Can store only one characte</td></tr><tr><td>int</td><td>16</td><td>Can store one integer value</td></tr><tr><td>float</td><td>32</td><td>Can store floating values</td></tr><tr><td>double</td><td>64</td><td>Can store large floating values</td></tr><tr><td>long double</td><td>80</td><td>Can store very large floating values</td></tr><tr><td>void</td><td>void has no value</td><td> &#8211;</td></tr></tbody></table><figcaption>Primitive data type in C</figcaption></figure>
+
+
+
+<p><strong>Remember that</strong>, the size of data type is machine dependent. It may vary according to the machine.</p>
+
+
+
+<p>General structure to define primitive data type &#8211; </p>
+
+
+
+<p>data-type identifier;</p>
+
+
+
+<p><strong>Example &#8211; </strong></p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td>int a;</td><td>declared a of type integer</td></tr><tr><td>int a,b;</td><td>declared two identifier a,b of type integer</td></tr><tr><td>int a=10;</td><td>declared a of type integer having value 10</td></tr><tr><td>int a,b=10,c;</td><td>declared three identifier a,b,c. here value of b is 10</td></tr><tr><td></td><td></td></tr><tr><td>char a;</td><td>declared a of type char</td></tr><tr><td>char a =&#8221;b&#8221;;</td><td>declared a of char type having value b</td></tr><tr><td>char a,b=&#8221;c&#8221;,c</td><td>declared three identifier a,b,c. here value of b is c</td></tr><tr><td></td><td></td></tr><tr><td>float a,b=2.5,c;</td><td>declared three identifier a,b,c. here value of b is 2.5</td></tr><tr><td></td><td></td></tr><tr><td>double a,b=84569.98745,c;</td><td>declared three identifier a,b,c. here value of b is 84569.98745</td></tr><tr><td></td><td></td></tr><tr><td>long double a=186983.57852;</td><td>declared identifier a having value 186983.57852</td></tr></tbody></table><figcaption>Primitive data type declaration</figcaption></figure>
+
+
+
+<p><strong>Derived data type &#8211; </strong>Derived data types are the aggregation of primitive data types. These data types can hold multiple values. In C derived data types  are &#8211;</p>
+
+
+
+<ul><li>Array &#8211; Array is the collection of similar data items, stored in the contiguous memory location. Values stored in array can be directly accessed using the indicies.</li><li>Function &#8211; A function is a group of statement, used to perform desired task.</li></ul>
+
+
+
+<p><strong>Declaring array</strong> &#8211; The general format of declaring array is </p>
+
+
+
+<p>data-type variable-name[size];</p>
+
+
+
+<p>here size &#8211; how many maximum values can be stored into array.</p>
+
+
+
+<p>Example &#8211; </p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td>int a[5];</td><td>array of type integer, can hold 5 values and have random values</td></tr><tr><td>int a[3]={1,2,3};</td><td>array of type integer, can hold 3 values and initial values are 1,2,3</td></tr><tr><td>int a[2]={0,0,0};</td><td>array of type integer, can hold 3 values and initial values are 0,0,0</td></tr><tr><td>int a[3]={};</td><td>array of type integer, can hold 3 values and initial values are 0,0,0</td></tr><tr><td>int a[3]={5};</td><td>array of type integer, can hold 3 values and initial values are 5,0,0</td></tr><tr><td>int a[]={5,5);</td><td>array of type int and size 2, having value 5,5</td></tr><tr><td>int a[]={1,2,3};</td><td>array of type int and size 3, having value 1,2,3</td></tr><tr><td></td><td></td></tr><tr><td>char a[4];</td><td>array of type char can hold 5 values and have random characters</td></tr><tr><td></td><td></td></tr><tr><td>float a[5];</td><td>array of type float can hold 5 floating values and have random floating values</td></tr><tr><td></td><td></td></tr><tr><td>double a[5];</td><td>array of type double can hold 5 floating values and have random floating values</td></tr><tr><td></td><td></td></tr><tr><td>long double a[5];</td><td>array of type long double can hold 5 values and have random floating values</td></tr></tbody></table><figcaption>Declaring array</figcaption></figure>
+
+
+
+<p><strong>Declaring function </strong>&#8211; The general format of declaring function is &#8211;</p>
+
+
+
+<p>data-type function-name (parameters);</p>
+
+
+
+<p>here parameters means he values passed into the function.</p>
+
+
+
+<p>Example &#8211; </p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td>int fun(int a);</td><td>function of integer type and one value is passed into the function</td></tr><tr><td>int fun(int a,int b);</td><td>function of integer type and two values are passed into the function</td></tr><tr><td>int fun(int a, float b);</td><td>function of integer type and two values are passed into function</td></tr><tr><td>int fun(int a,int b=12);</td><td>function of integer type, here default value of b is 12, but it can be override</td></tr><tr><td></td><td></td></tr><tr><td>float fun(int a);</td><td>function of float type and one value is passed into the fucntion</td></tr><tr><td></td><td></td></tr><tr><td>double fun(int b);</td><td>function of double type and one value is passed into the fucntion</td></tr><tr><td></td><td></td></tr><tr><td>long double fun(int a)</td><td>function of long double type and one value is passed into the fucntion</td></tr><tr><td></td><td></td></tr><tr><td>void fun(int a)</td><td>function of void type and one value passed into the function</td></tr></tbody></table></figure>
+
+
+
+<p><strong>User-defined data type &#8211; </strong>User-defined data types are the combination of primitive data types and derived data types. These data type can be used to store the values with the different type but have a relation with each other, ex &#8211; name and age of a person can be stored in a single identifier by using user-defined data type.</p>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Operator precedence &#038; associativity in C</title>
+		<link>https://coderupdate.com/operator-precedence-associativity-in-c/</link>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Sat, 02 Jan 2021 08:53:48 +0000</pubDate>
+				<category><![CDATA[programming]]></category>
+		<guid isPermaLink="false">https://coderupdate.com/?p=565</guid>
+
+					<description><![CDATA[Operator Associativity () [] -&#62; Left to right + &#8211; ++ &#8211; &#8211; ! ~ * &#38; sizeof (type) Right to left * / % Left to right + &#8211; Left to right &#60;&#60; &#62;&#62; Left to right &#60; &#60;= &#62; &#62;= Left to right == != Left to right &#38; Left to right ^ ... <a title="Operator precedence &#038; associativity in C" class="read-more" href="https://coderupdate.com/operator-precedence-associativity-in-c/" aria-label="More on Operator precedence &#038; associativity in C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<figure class="wp-block-table"><table><tbody><tr><th>Operator</th><th>Associativity</th></tr><tr><td>() [] -&gt; </td><td>Left to right</td></tr><tr><td>+ &#8211;  ++ &#8211; &#8211; ! ~ * &amp; sizeof (type)</td><td>Right to left</td></tr><tr><td>* / %</td><td>Left to right</td></tr><tr><td>+ &#8211;</td><td>Left to right</td></tr><tr><td>&lt;&lt; &gt;&gt;</td><td>Left to right</td></tr><tr><td>&lt; &lt;= &gt; &gt;=</td><td>Left to right</td></tr><tr><td>== !=</td><td>Left to right</td></tr><tr><td>&amp;</td><td>Left to right</td></tr><tr><td>^</td><td>Left to right</td></tr><tr><td>|</td><td>Left to right</td></tr><tr><td>&amp;&amp;</td><td>Left to right</td></tr><tr><td>||</td><td>Left to right</td></tr><tr><td>?:</td><td>Right to left</td></tr><tr><td>= += -= *= /= %=&gt;&gt;= &lt;&lt;= &amp;= ^= |=</td><td>Right to left</td></tr><tr><td>,</td><td>Left to right</td></tr></tbody></table><figcaption>Operator precedence in C</figcaption></figure>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Special operators in C</title>
+		<link>https://coderupdate.com/special-operators-in-c/</link>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Sat, 02 Jan 2021 08:51:27 +0000</pubDate>
+				<category><![CDATA[programming]]></category>
+		<guid isPermaLink="false">https://coderupdate.com/?p=563</guid>
+
+					<description><![CDATA[Operator Description comma The comma operator is used to link related expression together sizeof The sizeof operator is a compile-time operator, it returns the number of byte operand occupy. * used to declare a variable as a pointer variable &#38; Returns the address of variable -&#62; Member selection operator Special operator We will learn more ... <a title="Special operators in C" class="read-more" href="https://coderupdate.com/special-operators-in-c/" aria-label="More on Special operators in C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<figure class="wp-block-table"><table><tbody><tr><td><strong>Operator</strong></td><td><strong>Description</strong></td></tr><tr><td>comma </td><td>The comma operator is used to link related expression together</td></tr><tr><td>sizeof </td><td>The sizeof operator is a compile-time operator, it returns the number of byte operand occupy.</td></tr><tr><td>* </td><td>used to declare a variable as a pointer variable</td></tr><tr><td>&amp;</td><td>Returns the address of variable</td></tr><tr><td>-&gt;</td><td>Member selection operator</td></tr></tbody></table><figcaption>Special operator</figcaption></figure>
+
+
+
+<p>We will learn more about these operators in future.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Increment or Decrement operator in C</title>
+		<link>https://coderupdate.com/increment-or-decrement-operator-in-c/</link>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Sat, 02 Jan 2021 08:49:22 +0000</pubDate>
+				<category><![CDATA[programming]]></category>
+		<guid isPermaLink="false">https://coderupdate.com/?p=559</guid>
+
+					<description><![CDATA[The increment operator increases the value of operand by 1, while the decrement operator decreases the value of operand by 1. Let&#8217;s see the uses of these operators Operator Description ++a first, &#8216;a&#8217; increases by 1, then the value of &#8216;a&#8217; will be written a++ first value of &#8216;a&#8217; returns, then increases by 1 &#8211;b ... <a title="Increment or Decrement operator in C" class="read-more" href="https://coderupdate.com/increment-or-decrement-operator-in-c/" aria-label="More on Increment or Decrement operator in C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<p>The increment operator increases the value of operand by 1, while the decrement operator decreases the value of operand by 1. Let&#8217;s see the uses of these operators</p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td><strong>Operator</strong></td><td><strong>Description</strong></td></tr><tr><td>++a</td><td>first, &#8216;a&#8217; increases by 1, then the value of &#8216;a&#8217; will be written </td></tr><tr><td>a++</td><td>first value of &#8216;a&#8217; returns, then increases by 1</td></tr><tr><td>&#8211;b</td><td>first, &#8216;b&#8217; decreases by 1, then the value of &#8216;b&#8217; will be written</td></tr><tr><td>b&#8211;</td><td>first value of &#8216;b&#8217; returns, then decreases by 1</td></tr></tbody></table><figcaption>Increment or decrement operator in C</figcaption></figure>
+
+
+
+<p>Example &#8211;</p>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="660" height="260" src="https://coderupdate.com/wp-content/uploads/2021/01/image-11.png" alt="" class="wp-image-560" srcset="https://coderupdate.com/wp-content/uploads/2021/01/image-11.png 660w, https://coderupdate.com/wp-content/uploads/2021/01/image-11-300x118.png 300w" sizes="(max-width: 660px) 100vw, 660px" /></figure>
+
+
+
+<p>Output &#8211; </p>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="701" height="203" src="https://coderupdate.com/wp-content/uploads/2021/01/image-12.png" alt="" class="wp-image-561" srcset="https://coderupdate.com/wp-content/uploads/2021/01/image-12.png 701w, https://coderupdate.com/wp-content/uploads/2021/01/image-12-300x87.png 300w" sizes="(max-width: 701px) 100vw, 701px" /></figure>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Conditional operator in C &#8211;</title>
+		<link>https://coderupdate.com/conditional-operator-in-c/</link>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Sat, 02 Jan 2021 08:46:47 +0000</pubDate>
+				<category><![CDATA[programming]]></category>
+		<guid isPermaLink="false">https://coderupdate.com/?p=555</guid>
+
+					<description><![CDATA[A ternary operator is also known as the conditional operator is available in C to construct conditional operations. The operator format is &#8211; identifier = expression1 ? expression2 : expression3; or in short ? : Example of ternary operator &#8211; x = ( a &#62; b ) ? a : b; here x, a, b ... <a title="Conditional operator in C &#8211;" class="read-more" href="https://coderupdate.com/conditional-operator-in-c/" aria-label="More on Conditional operator in C &#8211;">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<p>A ternary operator is also known as the conditional operator is available in C to construct conditional operations. The operator format is &#8211;</p>
+
+
+
+<p>identifier = expression1 <strong>?</strong> expression2 <strong>:</strong> expression3;</p>
+
+
+
+<p>or in short      ? :</p>
+
+
+
+<p>Example of ternary operator &#8211; </p>
+
+
+
+<p>x = ( a &gt; b ) ? a : b;</p>
+
+
+
+<p>here x, a, b are the identifier and &#8216;&gt;&#8217; and &#8216;?&#8217; are operator. </p>
+
+
+
+<p>Ternary operator will written value &#8216;a&#8217; if condition a&gt; b, otherwise b.</p>
+
+
+
+<p>The above syntax can be interpreted as </p>
+
+
+
+<p>if ( a&gt; b){</p>
+
+
+
+<p> x = a;</p>
+
+
+
+<p>}</p>
+
+
+
+<p>else{</p>
+
+
+
+<p>x = b;</p>
+
+
+
+<p>}</p>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="394" height="181" src="https://coderupdate.com/wp-content/uploads/2021/01/image-9.png" alt="" class="wp-image-556" srcset="https://coderupdate.com/wp-content/uploads/2021/01/image-9.png 394w, https://coderupdate.com/wp-content/uploads/2021/01/image-9-300x138.png 300w" sizes="(max-width: 394px) 100vw, 394px" /></figure>
+
+
+
+<p>Output &#8211; </p>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="546" height="38" src="https://coderupdate.com/wp-content/uploads/2021/01/image-10.png" alt="" class="wp-image-557" srcset="https://coderupdate.com/wp-content/uploads/2021/01/image-10.png 546w, https://coderupdate.com/wp-content/uploads/2021/01/image-10-300x21.png 300w" sizes="(max-width: 546px) 100vw, 546px" /></figure>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Logical operators in C &#8211;</title>
 		<link>https://coderupdate.com/logical-operators-in-c/</link>
 		
@@ -323,484 +596,6 @@
 
 
 <figure class="wp-block-image size-large"><img loading="lazy" width="541" height="60" src="https://coderupdate.com/wp-content/uploads/2020/12/image-32.png" alt="" class="wp-image-481" srcset="https://coderupdate.com/wp-content/uploads/2020/12/image-32.png 541w, https://coderupdate.com/wp-content/uploads/2020/12/image-32-300x33.png 300w" sizes="(max-width: 541px) 100vw, 541px" /></figure>
-
-
-
-<p></p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Token in C &#8211;</title>
-		<link>https://coderupdate.com/token-in-c/</link>
-		
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<pubDate>Thu, 31 Dec 2020 09:43:36 +0000</pubDate>
-				<category><![CDATA[programming]]></category>
-		<guid isPermaLink="false">https://coderupdate.com/?p=461</guid>
-
-					<description><![CDATA[Token is the smallest unit in a program. Tokens are meaningful to the compiler. In C tokens are divided into 6 categories &#8211; Keyword Identifier Constant String Operator Special symbol Keyword &#8211; Keywords are the predefined word in C and have special meaning in the program. C language contains 32 predefined keyword &#8211; auto break ... <a title="Token in C &#8211;" class="read-more" href="https://coderupdate.com/token-in-c/" aria-label="More on Token in C &#8211;">Read more</a>]]></description>
-										<content:encoded><![CDATA[
-<p><strong>Token</strong> is the smallest unit in a program. Tokens are meaningful to the compiler. In C tokens are divided into 6 categories &#8211; </p>
-
-
-
-<ul><li>Keyword</li><li>Identifier</li><li>Constant</li><li>String </li><li>Operator</li><li>Special symbol</li></ul>
-
-
-
-<p></p>
-
-
-
-<p><strong>Keyword</strong> &#8211; Keywords are the predefined word in C and have special meaning in the program. C language contains 32 predefined keyword &#8211; </p>
-
-
-
-<figure class="wp-block-table"><table><tbody><tr><td>auto</td><td>break</td><td>case</td><td>char</td><td>continue</td><td>do</td></tr><tr><td>default</td><td>const</td><td>double</td><td>else</td><td>enum</td><td>extern</td></tr><tr><td>for</td><td>if</td><td>goto</td><td>float</td><td>int</td><td>long</td></tr><tr><td>register</td><td>return</td><td>signed</td><td>static</td><td>sizeof</td><td>short</td></tr><tr><td>struct</td><td>switch</td><td>typedef</td><td>union</td><td>void</td><td>while</td></tr><tr><td>volatile</td><td>unsigned</td><td></td><td></td><td></td><td></td></tr></tbody></table><figcaption><strong>Keywords in C</strong></figcaption></figure>
-
-
-
-<p><strong>Identifier</strong> &#8211; Identifier refers to the name of variable, function and array. These are the user-defined name and can contain capital alphabet, small alphabet, numbers and underscore( _ ). There are couple of rules programmer should follow while creating any identifier &#8211; </p>
-
-
-
-<ul><li>Identifier must start with either alphabet ( both capital and small ) or underscore ( _ ).</li><li>Identifier must not start with number.</li><li>Identifier name should not be <strong>keyword</strong>.</li><li>Identifier must not contain any white space</li><li>Identifier can have any number of capital alphabet, small alphabet, numbers, underscore ( _ ) upto 31 characters.</li></ul>
-
-
-
-<p><strong>Constant</strong> &#8211; Constant refers to the fix value that remains unchanged during the execution of program. &#8216;<strong>const</strong>&#8216; keyword is used to define any identifier as constant.</p>
-
-
-
-<p><strong>String</strong> &#8211; A string is an array of character, containing &#8216;\0&#8217; at the end of array. The character &#8216;\0&#8217; ( without &#8216; &#8216;) is known as null character indicates to the compiler that string has ended.</p>
-
-
-
-<p><strong>Operator</strong> &#8211; Operators are the mathematical symbols, used to perform mathematical operation in program. In C language operators are divided into 8 categories &#8211; </p>
-
-
-
-<ul><li>Arithmetic Operator</li><li>Assignment Operator</li><li>Bitwise Operator</li><li>Relational Operator</li><li>Increment or Decrement Operator</li><li>Special Operator</li><li>Logical Operator</li><li>Conditional Operator</li></ul>
-
-
-
-<p>We will learn more about operators in future.</p>
-
-
-
-<p><strong>Special Symbol &#8211; </strong>All the characters other than alphabet and number are special symbol. All of these have special meaning in program.</p>
-
-
-
-<p></p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>What is C &#038; Installation guide for C &#038; C++</title>
-		<link>https://coderupdate.com/installation-guide-for-c-and-c/</link>
-		
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<pubDate>Thu, 31 Dec 2020 09:40:50 +0000</pubDate>
-				<category><![CDATA[programming]]></category>
-		<guid isPermaLink="false">https://coderupdate.com/?p=459</guid>
-
-					<description><![CDATA[What is C &#8211; C is a procedural programming language. Its executed step by step. C is a faster programming language as compared to Java, Python, etc. It is used to develop an Operating System and more. Dennis Ritchie is a inventor of C language. Installing of C and C++ is easy task, is not ... <a title="What is C &#038; Installation guide for C &#038; C++" class="read-more" href="https://coderupdate.com/installation-guide-for-c-and-c/" aria-label="More on What is C &#038; Installation guide for C &#038; C++">Read more</a>]]></description>
-										<content:encoded><![CDATA[
-<h3><strong>What is C </strong>&#8211; </h3>
-
-
-
-<p>C is a procedural programming language. Its executed step by step. C is a faster programming language as compared to Java, Python, etc. It is used to develop an Operating System and more.</p>
-
-
-
-<p>Dennis Ritchie is a inventor of C language.</p>
-
-
-
-<p>Installing of C and C++ is easy task, is not tough as looks, I will help you to install C and C++ by my guide.</p>
-
-
-
-<h3><strong>Windows Installation</strong> &#8211;</h3>
-
-
-
-<p><strong>Using Visual Studio Code</strong>:</p>
-
-
-
-<figure class="wp-block-image size-large"><img loading="lazy" width="1024" height="501" src="https://coderupdate.com/wp-content/uploads/2020/12/image-23-1024x501.png" alt="" class="wp-image-528" srcset="https://coderupdate.com/wp-content/uploads/2020/12/image-23-1024x501.png 1024w, https://coderupdate.com/wp-content/uploads/2020/12/image-23-300x147.png 300w, https://coderupdate.com/wp-content/uploads/2020/12/image-23-768x376.png 768w, https://coderupdate.com/wp-content/uploads/2020/12/image-23.png 1347w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
-
-
-
-<ul><li>Go to the official website of Visual Studio Code by <a href="https://code.visualstudio.com/download" target="_blank" aria-label=" (opens in a new tab)" rel="noreferrer noopener" class="rank-math-link">click here</a></li><li>Download the Visual studio according to the computer.</li><li>Install the visual studio code</li><li>Add C extension in visual studio &#8211; <ul><li>Open Visual Studio Code</li></ul><ul><li>Press Ctrl + Shift + X to open extension menu</li><li>Type C in the search bar</li><li>Click on the respective install button to add any extension in visual studio code</li></ul></li></ul>
-
-
-
-<p><strong>Using Geany</strong>:</p>
-
-
-
-<figure class="wp-block-image size-large"><img loading="lazy" width="1024" height="582" src="https://coderupdate.com/wp-content/uploads/2020/12/image-33-1024x582.png" alt="" class="wp-image-529" srcset="https://coderupdate.com/wp-content/uploads/2020/12/image-33-1024x582.png 1024w, https://coderupdate.com/wp-content/uploads/2020/12/image-33-300x170.png 300w, https://coderupdate.com/wp-content/uploads/2020/12/image-33-768x436.png 768w, https://coderupdate.com/wp-content/uploads/2020/12/image-33.png 1350w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
-
-
-
-<ul><li>Go to the official website of Geany by <a aria-label=" (opens in a new tab)" href="https://www.geany.org/download/releases/" target="_blank" rel="noreferrer noopener" class="rank-math-link">click here</a></li><li>Download the latest version according to the computer.</li><li>Install the exe file</li><li>After that, you need to install TDM-GCC by <a aria-label="click here (opens in a new tab)" href="https://jmeubank.github.io/tdm-gcc/download/" target="_blank" rel="noreferrer noopener" class="rank-math-link">click here</a></li><li>And done! enjoy</li></ul>
-
-
-
-<p><strong>Using turbo C++: </strong></p>
-
-
-
-<figure class="wp-block-image size-large"><img loading="lazy" width="641" height="400" src="https://coderupdate.com/wp-content/uploads/2020/12/image-34.png" alt="" class="wp-image-530" srcset="https://coderupdate.com/wp-content/uploads/2020/12/image-34.png 641w, https://coderupdate.com/wp-content/uploads/2020/12/image-34-300x187.png 300w" sizes="(max-width: 641px) 100vw, 641px" /></figure>
-
-
-
-<ul><li>Download Turbo C++ for windows 32bit/64bit according to the computer.</li><li>Install the Turbo C++</li></ul>
-
-
-
-<h3><strong>Linux installation &#8211;</strong></h3>
-
-
-
-<p><strong>Default compiler</strong>:</p>
-
-
-
-<ul><li>In Linux C compiler is preloaded. </li><li>C program can be compiled by typing command &#8211; &#8216;gcc program.c&#8217;</li><li>then run command -&#8216;./a.o&#8217; or &#8216;./a.out&#8217;</li></ul>
-
-
-
-<p><strong>Using Visual Studio Code: </strong></p>
-
-
-
-<ul><li>Go to the official website of Visual Studio Code by <a href="https://code.visualstudio.com/download" target="_blank" aria-label=" (opens in a new tab)" rel="noreferrer noopener" class="rank-math-link">click here</a></li><li>Download the Visual studio according to the computer.</li><li>Install the visual studio code</li><li>Add C extension in visual studio &#8211; <ul><li>Open Visual Studio Code</li></ul><ul><li>Press Ctrl + Shift + X to open extension menu</li><li>Type C in the search bar</li><li>Click on the respective install button to add any extension in visual studio code</li></ul></li></ul>
-
-
-
-<p></p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>More examples on &#8216;Range-Based for loops&#8217;</title>
-		<link>https://coderupdate.com/more-examples-on-range-based-for-loops/</link>
-		
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<pubDate>Mon, 28 Dec 2020 08:07:04 +0000</pubDate>
-				<category><![CDATA[programming]]></category>
-		<category><![CDATA[examples on Range Based for loops]]></category>
-		<category><![CDATA[loops in vector]]></category>
-		<category><![CDATA[using range loop in stl]]></category>
-		<category><![CDATA[using range loop in stl library]]></category>
-		<guid isPermaLink="false">https://coderupdate.com/?p=230</guid>
-
-					<description><![CDATA[Example-1. Let&#8217;s try to iterate for loop for some fixed numbers. for ( int i : {5, 6, 7, 9, 1, 68}){ cout&#60;&#60;i&#60;&#60;endl; } The output of the above code is &#8211; Example 2. Iterating for loop over vector. The output of the above code &#8211; Example 3. In the above program, adding 1 to ... <a title="More examples on &#8216;Range-Based for loops&#8217;" class="read-more" href="https://coderupdate.com/more-examples-on-range-based-for-loops/" aria-label="More on More examples on &#8216;Range-Based for loops&#8217;">Read more</a>]]></description>
-										<content:encoded><![CDATA[
-<p>Example-1. Let&#8217;s try to iterate for loop for some fixed numbers.</p>
-
-
-
-<p>for ( int i : {5, 6, 7, 9, 1, 68}){</p>
-
-
-
-<p>                         cout&lt;&lt;i&lt;&lt;endl;</p>
-
-
-
-<p>                         }</p>
-
-
-
-<figure class="wp-block-image size-large"><img loading="lazy" width="486" height="190" src="https://coderupdate.com/wp-content/uploads/2020/12/image-9.png" alt="" class="wp-image-231" srcset="https://coderupdate.com/wp-content/uploads/2020/12/image-9.png 486w, https://coderupdate.com/wp-content/uploads/2020/12/image-9-300x117.png 300w" sizes="(max-width: 486px) 100vw, 486px" /></figure>
-
-
-
-<p>The output of the above code is &#8211;</p>
-
-
-
-<figure class="wp-block-image size-large"><img loading="lazy" width="522" height="153" src="https://coderupdate.com/wp-content/uploads/2020/12/image-10.png" alt="" class="wp-image-232" srcset="https://coderupdate.com/wp-content/uploads/2020/12/image-10.png 522w, https://coderupdate.com/wp-content/uploads/2020/12/image-10-300x88.png 300w" sizes="(max-width: 522px) 100vw, 522px" /></figure>
-
-
-
-<hr class="wp-block-separator"/>
-
-
-
-<p>Example 2. Iterating for loop over vector.</p>
-
-
-
-<figure class="wp-block-image size-large"><img loading="lazy" width="485" height="244" src="https://coderupdate.com/wp-content/uploads/2020/12/image-11.png" alt="" class="wp-image-233" srcset="https://coderupdate.com/wp-content/uploads/2020/12/image-11.png 485w, https://coderupdate.com/wp-content/uploads/2020/12/image-11-300x151.png 300w" sizes="(max-width: 485px) 100vw, 485px" /></figure>
-
-
-
-<p>The output of the above code &#8211; </p>
-
-
-
-<figure class="wp-block-image size-large"><img loading="lazy" width="541" height="137" src="https://coderupdate.com/wp-content/uploads/2020/12/image-13.png" alt="" class="wp-image-235" srcset="https://coderupdate.com/wp-content/uploads/2020/12/image-13.png 541w, https://coderupdate.com/wp-content/uploads/2020/12/image-13-300x76.png 300w" sizes="(max-width: 541px) 100vw, 541px" /></figure>
-
-
-
-<p>Example 3. In the above program, adding 1 to all the value stored into vector.</p>
-
-
-
-<figure class="wp-block-image size-large"><img loading="lazy" width="500" height="259" src="https://coderupdate.com/wp-content/uploads/2020/12/image-14.png" alt="" class="wp-image-236" srcset="https://coderupdate.com/wp-content/uploads/2020/12/image-14.png 500w, https://coderupdate.com/wp-content/uploads/2020/12/image-14-300x155.png 300w" sizes="(max-width: 500px) 100vw, 500px" /></figure>
-
-
-
-<p>The output of the above code &#8211; </p>
-
-
-
-<figure class="wp-block-image size-large"><img loading="lazy" width="531" height="142" src="https://coderupdate.com/wp-content/uploads/2020/12/image-15.png" alt="" class="wp-image-237" srcset="https://coderupdate.com/wp-content/uploads/2020/12/image-15.png 531w, https://coderupdate.com/wp-content/uploads/2020/12/image-15-300x80.png 300w" sizes="(max-width: 531px) 100vw, 531px" /></figure>
-
-
-
-<p><strong>IMPORTANT &#8211; </strong>Notice that in the example M-3 &#8216;auto&#8217; keyword is used, while in example M-4 &#8216;auto&amp;&#8217; keyword is used. The difference between both keywords are &#8211; </p>
-
-
-
-<ul><li>auto keyword is used when you want to work with <strong>copies</strong>.</li><li>auto&amp; keyword is used when you want to work with <strong>original items and may modify them.</strong></li><li>Choose auto const &amp;x when you <strong>want to work with original items and will not modify them</strong>.</li></ul>
-
-
-
-<p></p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>The Miscellaneous ability of C++</title>
-		<link>https://coderupdate.com/the-miscellaneous-ability-of-c/</link>
-		
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<pubDate>Mon, 28 Dec 2020 08:01:33 +0000</pubDate>
-				<category><![CDATA[programming]]></category>
-		<category><![CDATA[The Miscellaneous ability of C++]]></category>
-		<category><![CDATA[unknown facts about c++]]></category>
-		<guid isPermaLink="false">https://coderupdate.com/?p=225</guid>
-
-					<description><![CDATA[1. Range based for loops &#8211; In c++11, new variant of for loop has been introduced, which iterates over all the elements of a given array, range, collections etc. This variant of for loop can be understand as &#8216;foreach&#8217; loop. The structure of for loop is &#8211; for ( var_decl : array ){ statements; } ... <a title="The Miscellaneous ability of C++" class="read-more" href="https://coderupdate.com/the-miscellaneous-ability-of-c/" aria-label="More on The Miscellaneous ability of C++">Read more</a>]]></description>
-										<content:encoded><![CDATA[
-<h3>1. <strong>Range based for loops</strong> &#8211;</h3>
-
-
-
-<p>In c++11, new variant of for loop has been introduced, which iterates over all the elements of a given array, range, collections etc. This variant of for loop can be understand as &#8216;<strong>foreach&#8217;</strong> loop.</p>
-
-
-
-<p>The structure of for loop is &#8211; </p>
-
-
-
-<p>                            for ( var_decl : array ){</p>
-
-
-
-<p>                                                                       statements;</p>
-
-
-
-<p>                                                                      }</p>
-
-
-
-<p>Example &#8211; </p>
-
-
-
-<figure class="wp-block-image size-large"><img loading="lazy" width="619" height="284" src="https://coderupdate.com/wp-content/uploads/2020/12/image-6.png" alt="" class="wp-image-226" srcset="https://coderupdate.com/wp-content/uploads/2020/12/image-6.png 619w, https://coderupdate.com/wp-content/uploads/2020/12/image-6-300x138.png 300w" sizes="(max-width: 619px) 100vw, 619px" /></figure>
-
-
-
-<p>The output of the above program &#8211; </p>
-
-
-
-<figure class="wp-block-image size-large"><img loading="lazy" width="505" height="119" src="https://coderupdate.com/wp-content/uploads/2020/12/image-8.png" alt="" class="wp-image-228" srcset="https://coderupdate.com/wp-content/uploads/2020/12/image-8.png 505w, https://coderupdate.com/wp-content/uploads/2020/12/image-8-300x71.png 300w" sizes="(max-width: 505px) 100vw, 505px" /></figure>
-
-
-
-<p class="has-text-align-left"><strong>Explanation &#8211; </strong>In the above program, array of data type integer has been initialized &#8211;</p>
-
-
-
-<p class="has-text-align-left">                                                           int arr[] = {5,7,8,9};</p>
-
-
-
-<p class="has-text-align-left">                            Now for loop is initialised with iterator i &#8211;</p>
-
-
-
-<p class="has-text-align-left">                                                           for ( int i : arr)</p>
-
-
-
-<p class="has-text-align-left">                            Loop will run n times, where n is the number of elements in array <strong>arr</strong>. In each iteration value of i will be the respective value from array <strong>arr</strong>.</p>
-
-
-
-<p>For more examples <a href="https://coderupdate.com/more-examples-on-range-based-for-loops/" class="rank-math-link">click here</a> </p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Even Pair Sum &#124; CodeChef</title>
-		<link>https://coderupdate.com/even-pair-sum-codechef/</link>
-		
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<pubDate>Thu, 10 Dec 2020 08:08:42 +0000</pubDate>
-				<category><![CDATA[Codechef]]></category>
-		<category><![CDATA[even pair sum | codechef]]></category>
-		<category><![CDATA[even pair sum codechef solution]]></category>
-		<category><![CDATA[even pair sum solution]]></category>
-		<guid isPermaLink="false">https://coderupdate.com/?p=200</guid>
-
-					<description><![CDATA[Problem solution of these even pair sum CodeChef question is not that tough as looks, first two subtasks are easy to solve but the third part is not easy for everyone to solve, but don't worry because why I am here today I will show you problem solution of these even pair sum CodeChef question, But I will suggest you, first you try your best to solve this problem.]]></description>
-										<content:encoded><![CDATA[
-<h2>Even Pair Sum | CodeChef</h2>
-
-
-
-<p>To see this problem on the main site <a href="https://www.codechef.com/DEC20B/problems/EVENPSUM" target="_blank" aria-label=" (opens in a new tab)" rel="noreferrer noopener" class="rank-math-link">click here</a>.</p>
-
-
-
-<p>Even pair sum CodeChef in this problem, we were given two integers <strong>A</strong> and <strong>B</strong>. We need to find numbers of pairs of positive integers(<strong>X, Y</strong>) such that <strong>1≤X≤A</strong>, <strong>1≤Y≤B</strong>, and <strong>X+Y</strong> is even.</p>
-
-
-
-<h4>INPUT:</h4>
-
-
-
-<ul><li>The first line of the input contains a single integer <strong>T</strong> denoting the number of test cases. The description of <strong>T</strong> test cases follows.</li><li>The first and only line of each test case contains two space-separated integers <strong>A</strong> and <strong>B</strong>.</li></ul>
-
-
-
-<h4>OUTPUT:</h4>
-
-
-
-<p>For each test case, print a single line containing one integer ― the number of valid pairs.</p>
-
-
-
-<h4>CONSTRAINTS:</h4>
-
-
-
-<ul><li><strong>1≤T≤1,000</strong></li><li><strong>1≤A, B≤10<sup>9</sup></strong></li></ul>
-
-
-
-<h4>SUBTASKS:</h4>
-
-
-
-<p><strong>Subtask #1 (10 points):</strong>&nbsp;A,B≤10</p>
-
-
-
-<p><strong>Subtask #2 (10 points):</strong>&nbsp;A,B≤1,000</p>
-
-
-
-<p><strong>Subtask #3 (80 points):</strong>&nbsp;original constraints</p>
-
-
-
-<p></p>
-
-
-
-<h4>EXAMPLE INPUT:</h4>
-
-
-
-<p>4</p>
-
-
-
-<p>1 1</p>
-
-
-
-<p>2 3</p>
-
-
-
-<p>4 6</p>
-
-
-
-<p>8 9</p>
-
-
-
-<p></p>
-
-
-
-<h4>EXAMPLE OUTPUT:</h4>
-
-
-
-<p>1</p>
-
-
-
-<p>3</p>
-
-
-
-<p>12</p>
-
-
-
-<p>36</p>
-
-
-
-<p></p>
-
-
-
-<h4><strong>ANSWER:</strong></h4>
-
-
-
-<p></p>
-
-
-
-<p>Problem solution of these CodeChef question is not that tough as looks, first two subtasks are easy to solve but the third part is not easy for everyone to solve, but don&#8217;t worry because why I am here today I will show you problem solution of these CodeChef question, But I will suggest you, first you try your best to solve this problem.</p>
-
-
-
-<p>You can see solution by <a href="https://coderupdate.com/solutions/evenpairsum.txt" target="_blank" aria-label=" (opens in a new tab)" rel="noreferrer noopener" class="rank-math-link">CLICK HERE</a>.</p>
 
 
 
