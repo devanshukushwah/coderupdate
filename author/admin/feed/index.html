@@ -12,7 +12,7 @@
 	<atom:link href="http://localhost/coderupdate/author/admin/feed/" rel="self" type="application/rss+xml" />
 	<link>http://coderupdate.com/</link>
 	<description>This site helps you to update yourself.</description>
-	<lastBuildDate>Sat, 06 Feb 2021 14:05:31 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 15 Feb 2021 12:40:46 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,113 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Vector Cheatsheet in C++</title>
+		<link>https://coderupdate.com/vector-cheatsheet-in-c/</link>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Mon, 15 Feb 2021 12:40:42 +0000</pubDate>
+				<category><![CDATA[CheatSheet]]></category>
+		<guid isPermaLink="false">https://coderupdate.com/?p=826</guid>
+
+					<description><![CDATA[Function Use vector&#60;int&#62; vec Declaring a vector vector&#60;int&#62; vec = {1,2,3} Declaring and initializing the vector at the same time vector&#60;vector&#60;int&#62;&#62; v Declaring 2-D vector of int type vec.size() returns the number of element in the vector vec.max_size() returns the maximum number of elements vector can hold vec.capacity() return the size of the storage space ... <a title="Vector Cheatsheet in C++" class="read-more" href="https://coderupdate.com/vector-cheatsheet-in-c/" aria-label="More on Vector Cheatsheet in C++">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<figure class="wp-block-table"><table><tbody><tr><td><strong>Function</strong></td><td><strong>Use</strong></td></tr><tr><td>vector&lt;int&gt; vec</td><td>Declaring a vector</td></tr><tr><td>vector&lt;int&gt; vec = {1,2,3}</td><td>Declaring and initializing the vector at the same time</td></tr><tr><td></td><td></td></tr><tr><td>vector&lt;vector&lt;int&gt;&gt; v</td><td>Declaring 2-D vector of int type</td></tr><tr><td></td><td></td></tr><tr><td>vec.size()</td><td>returns the number of element in the vector</td></tr><tr><td>vec.max_size()</td><td>returns the maximum number of elements vector can hold</td></tr><tr><td>vec.capacity()</td><td>return the size of the storage space currently allocated to the vector expressed as the number of elements</td></tr><tr><td>vec.resize(n)</td><td>&nbsp;resize the current vector so that it contains n element (will delete all the element after the size n)</td></tr><tr><td>vec.empty()</td><td>return 1 if vec is empty else 0</td></tr><tr><td>vec.shrink_to_fit()</td><td>reduce the capacity of vector to fits the size</td></tr><tr><td>vec.reserve(n)</td><td>vector size changed to 100</td></tr><tr><td></td><td></td></tr><tr><td>vec1.swap(vec2)</td><td>swap all the element between the vector</td></tr><tr><td></td><td></td></tr><tr><td>vec.push_back(5)</td><td>push value 5 at the end of the vector</td></tr><tr><td>vec.insert(vec.begin()+i,n)</td><td>insert value n at the index i in vector</td></tr><tr><td></td><td></td></tr><tr><td>vec.pop_back()</td><td>pop the last value from the vector</td></tr><tr><td>vec.erase(vec.begin()+i)</td><td>delete the value stored at the index i in the vector</td></tr><tr><td>vec.erase(vec.begin()+i,vec.begin()+j)</td><td>delete the value stored at the index i to j-1 (here j&gt;i)</td></tr><tr><td>vec.clear()</td><td>delete all the element inside the vector</td></tr><tr><td></td><td></td></tr><tr><td>vec[i]</td><td>accessing value stored at the index i in the vector</td></tr><tr><td>vec.back()</td><td>return the last element of the vector</td></tr><tr><td></td><td></td></tr><tr><td>sort(vec.begin(),vec.end())</td><td>sort the vector in ascending order</td></tr><tr><td>sort(vec.begin(),vec.end(),greater&lt;int&gt;())</td><td>sort the vector in descending order</td></tr><tr><td></td><td></td></tr><tr><td>*max_element(vec.begin(),vec.end())</td><td>return the maximum element from the vec</td></tr><tr><td>*min_element(vec.begin(),vec.end())</td><td>return the minimum element from the vec</td></tr></tbody></table><figcaption>Vector functions</figcaption></figure>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- vector in c++ cheatsheet -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4940545543922013"
+     data-ad-slot="5478640894"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+<p><strong>Different methods for traversing vector &#8211;</strong></p>
+
+
+
+<ol><li><strong>Traversing using size &#8211;</strong>  </li></ol>
+
+
+
+<pre class="wp-block-preformatted">for(int i =0; i &lt; vec.size(); i++){
+cout&lt;&lt;vec[i]&lt;&lt;" ";
+}</pre>
+
+
+
+<p>2. <strong>Traversing vector using iterators</strong> &#8211;</p>
+
+
+
+<pre class="wp-block-preformatted">vector&lt;int> :: iterator v = vec.begin();
+while(v!=vec.end()){
+cout&lt;&lt;*v&lt;&lt;" ";
+v++;
+}</pre>
+
+
+
+<p>3. <strong>Traversing using auto variable </strong>&#8211; </p>
+
+
+
+<pre class="wp-block-preformatted">for(auto i = vec.begin(); i != vec.end(); i++){
+cout&lt;&lt;*i&lt;&lt;" ";
+}</pre>
+
+
+
+<p>4. <strong>Traversing using auto variable (accessing vector in read-only mode) </strong>&#8211; </p>
+
+
+
+<pre class="wp-block-preformatted">for(auto i = vec.cbegin(); i != vec.cend(); i++){
+cout&lt;&lt;*i&lt;&lt;" ";
+}</pre>
+
+
+
+<p>5. <strong>Reverse traversing using auto variable </strong>&#8211; </p>
+
+
+
+<pre class="wp-block-preformatted">for(auto i = vec.rbegin(); i != vec.rend(); i++){
+cout&lt;&lt;*i&lt;&lt;" ";
+}</pre>
+
+
+
+<p><strong>6. Reversing traversing using auto variable (accessing vector in read-only mode)-</strong> </p>
+
+
+
+<pre class="wp-block-preformatted">for(auto i = vec.crbegin(); i != vec.crend(); i++){
+cout&lt;&lt;*i&lt;&lt;" ";
+}</pre>
+
+
+
+<p><strong>7. Using advanced for loop &#8211;</strong> </p>
+
+
+
+<pre class="wp-block-preformatted">for(auto i : vec){
+cout&lt;&lt;i&lt;&lt;" ";
+}</pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Operators in C</title>
 		<link>https://coderupdate.com/operators-in-c/</link>
 		
@@ -1435,158 +1542,6 @@
 <div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-white-color has-text-color has-background" href="https://in.000webhost.com/" style="border-radius:7px;background-color:#552121" target="_blank" rel="wordpress.com noopener noreferrer">Go to 000webhost</a></div>
 </div>
 
-
-
-<p></p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Wipro Elite Off Campus Drive &#124; 3.5 LPA &#124; Fresher Recruitment &#124; Project Engineer</title>
-		<link>https://coderupdate.com/wipro-elite-off-campus-drive-3-5-lpa-fresher-recruitment-project-engineer/</link>
-		
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<pubDate>Thu, 26 Nov 2020 08:00:01 +0000</pubDate>
-				<category><![CDATA[Jobs]]></category>
-		<category><![CDATA[wipro elite off campus]]></category>
-		<category><![CDATA[wipro elite off campus 2020]]></category>
-		<category><![CDATA[Wipro Elite Off Campus Drive | 3.5 LPA | Fresher Recruitment | Project Engineer]]></category>
-		<category><![CDATA[wipro for 2021 batch]]></category>
-		<guid isPermaLink="false">https://coderupdate.com/?p=94</guid>
-
-					<description><![CDATA[WIPRO ELITE 2020]]></description>
-										<content:encoded><![CDATA[
-<p><strong>Wipro Elite Off Campus Drive:</strong>&nbsp;Wipro schedule to hire&nbsp;Freshers&nbsp;2021 for the post of Project Engineer. If you are B.E./B.Tech / 5 years Integrated-M.Tech, you may apply for the post. The location of the job is Pan India. The detailed eligibility criteria and application process are given below.</p>
-
-
-
-<p><strong>About the Company:&nbsp;</strong>Wipro Limited is an Indian multinational corporation that provides information technology, consulting and business process services. It is headquartered in Bangalore, Karnataka, India. In 2013, Wipro separated its non-IT businesses and formed the privately owned Wipro Enterprises.</p>
-
-
-
-<div style="height:65px" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<h2><strong>Wipro Elite Off Campus Drive:</strong></h2>
-
-
-
-<p><strong>Company Name:-</strong>&nbsp;Wipro India Pvt Ltd.</p>
-
-
-
-<p><strong>Job Position:-&nbsp;</strong>Project Engineer<ins>.</ins></p>
-
-
-
-<p><strong>Job</strong>&nbsp;<strong>Location:-</strong>&nbsp;&nbsp;PAN India.</p>
-
-
-
-<p><strong>Experience :-&nbsp;</strong>Fresher.</p>
-
-
-
-<p><strong>Salary Package :</strong>– INR 3.50 lacs per annum.</p>
-
-
-
-<p><strong>Qualification</strong>:-</p>
-
-
-
-<ul><li>B.E./B.Tech.</li></ul>
-
-
-
-<p><strong>Branch of Study</strong>:-</p>
-
-
-
-<ul><li>CS/IT.</li></ul>
-
-
-
-<h2><strong>Eligibility Criteria</strong>:</h2>
-
-
-
-<p><strong>Education</strong>:-</p>
-
-
-
-<ul><li>10th Standard: 60% or above</li><li>12th Standard: 60% or above</li><li>Graduation: 65% or CGPA Equivalent to 65% or above as applicable by the university guidelines</li></ul>
-
-
-
-<p><strong>Year of Passing</strong>:-</p>
-
-
-
-<ul><li>2021</li></ul>
-
-
-
-<p><strong>Service Agreement</strong>:-</p>
-
-
-
-<ul><li>Applicable for 12 months post joining @ INR 75,000 on pro rata basis</li></ul>
-
-
-
-<p><strong>Other Criteria</strong>:-</p>
-
-
-
-<ul><li>A maximum of 3 years of education gap, if any, is allowed between 10th and graduation.</li><li>Should be from a Full-time Degree course recognized by the Central/State Government of India.</li><li>All Arrears and backlogs need to be cleared at the time of the selection process.</li><li>Candidates who have participated in any interview process held by Wipro in the last six months are not eligible.</li><li>Should be an Indian Citizen or should hold a PIO or OCI card, in the event of holding a passport of any other country.</li><li>Bhutan and Nepal Nationals need to submit their citizenship certificate.</li></ul>
-
-
-
-<p><strong>Selection Process</strong>:-</p>
-
-
-
-<p>Every eligible candidate must go through below online assessment, below details appended for your reference.<br>Online Assessment (128 minutes) comprising of 3 sections:</p>
-
-
-
-<ul><li><strong>Aptitude Test</strong>&nbsp;– Logical Ability, Quantitative Ability , English (verbal) Ability.<br>Duration: 48 mins</li><li><strong>Written Communication Test</strong>&nbsp;– Essay writing. Duration: 20 mins</li><li><strong>Online Programming Test</strong>&nbsp;– Two programs for coding.<br>Duration: 60 mins<br>Candidate can chose any one of programming language for coding test: Java, C, C++ or Python</li></ul>
-
-
-
-<p>Last date to apply:&nbsp;<strong>5th January 2021</strong><br><br>Online assessment will be tentatively held between 1<strong>1th January 2021 – 17th January 2021.</strong></p>
-
-
-
-<p><strong>Additional Information:-</strong></p>
-
-
-
-<ul><li>It is entirely the responsibility of Wipro to permit/limit the participation of each candidate in the Elite National Level Talent Hunt 2021 recruitment process.</li><li>After passing the online tests, candidates will have to go through a Technical Interview and HR interview.</li><li>Reservations Parameters and selection procedure belong solely to the discretion of Wipro. Wipro is not obligated to disclose any information at any stage of the selection process.</li></ul>
-
-
-
-<ul><li>Wipro also reserves the right to make an initial offer if the provisionally selected candidate does not meet certain conditions, which are a prerequisite for employment.</li><li>Wipro also reserves the right to be held liable to any candidate if he/she is found to be involved in any illegal activity, for example, misperception, fraud, production of illegal documents, etc.</li><li>Wipro will inform candidates about the results of the recruitment by individual e-mails or other means of communication provided by individual candidates.</li></ul>
-
-
-
-<p>If you have any questions/concerns, please contact&nbsp;<a href="mailto:manager.campus@wipro.com">manager.campus@wipro.com</a>&nbsp;with the subject “Elite NLTH 2021” and the same will be responded to within 3 working days</p>
-
-
-
-<h4><strong>For Official Notification :</strong>– .<a href="https://careers.wipro.com/elite" target="_blank" rel="noreferrer noopener">https://careers.wipro.com/elite</a></h4>
-
-
-<ul class="wp-block-latest-posts wp-block-latest-posts__list aligncenter"><li><a href="https://coderupdate.com/operators-in-c/">Operators in C</a></li>
-<li><a href="https://coderupdate.com/data-type-in-c/">Data type in C</a></li>
-<li><a href="https://coderupdate.com/operator-precedence-associativity-in-c/">Operator precedence &#038; associativity in C</a></li>
-<li><a href="https://coderupdate.com/token-in-c/">Token in C</a></li>
-<li><a href="https://coderupdate.com/installation-guide-for-c-and-c/">What is C &#038; Installation guide for C &#038; C++</a></li>
-</ul>
 
 
 <p></p>

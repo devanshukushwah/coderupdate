@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>CheatSheet &#8211; CoderUpdate</title>
+	<atom:link href="http://localhost/coderupdate/category/cheatsheet/feed/" rel="self" type="application/rss+xml" />
+	<link>http://coderupdate.com/</link>
+	<description>This site helps you to update yourself.</description>
+	<lastBuildDate>Mon, 15 Feb 2021 12:40:46 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.3</generator>
+
+<image>
+	<url>https://coderupdate.com/wp-content/uploads/2020/11/cropped-cover-2-32x32.png</url>
+	<title>CheatSheet &#8211; CoderUpdate</title>
+	<link>http://coderupdate.com/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Vector Cheatsheet in C++</title>
+		<link>https://coderupdate.com/vector-cheatsheet-in-c/</link>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Mon, 15 Feb 2021 12:40:42 +0000</pubDate>
+				<category><![CDATA[CheatSheet]]></category>
+		<guid isPermaLink="false">https://coderupdate.com/?p=826</guid>
+
+					<description><![CDATA[Function Use vector&#60;int&#62; vec Declaring a vector vector&#60;int&#62; vec = {1,2,3} Declaring and initializing the vector at the same time vector&#60;vector&#60;int&#62;&#62; v Declaring 2-D vector of int type vec.size() returns the number of element in the vector vec.max_size() returns the maximum number of elements vector can hold vec.capacity() return the size of the storage space ... <a title="Vector Cheatsheet in C++" class="read-more" href="https://coderupdate.com/vector-cheatsheet-in-c/" aria-label="More on Vector Cheatsheet in C++">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<figure class="wp-block-table"><table><tbody><tr><td><strong>Function</strong></td><td><strong>Use</strong></td></tr><tr><td>vector&lt;int&gt; vec</td><td>Declaring a vector</td></tr><tr><td>vector&lt;int&gt; vec = {1,2,3}</td><td>Declaring and initializing the vector at the same time</td></tr><tr><td></td><td></td></tr><tr><td>vector&lt;vector&lt;int&gt;&gt; v</td><td>Declaring 2-D vector of int type</td></tr><tr><td></td><td></td></tr><tr><td>vec.size()</td><td>returns the number of element in the vector</td></tr><tr><td>vec.max_size()</td><td>returns the maximum number of elements vector can hold</td></tr><tr><td>vec.capacity()</td><td>return the size of the storage space currently allocated to the vector expressed as the number of elements</td></tr><tr><td>vec.resize(n)</td><td>&nbsp;resize the current vector so that it contains n element (will delete all the element after the size n)</td></tr><tr><td>vec.empty()</td><td>return 1 if vec is empty else 0</td></tr><tr><td>vec.shrink_to_fit()</td><td>reduce the capacity of vector to fits the size</td></tr><tr><td>vec.reserve(n)</td><td>vector size changed to 100</td></tr><tr><td></td><td></td></tr><tr><td>vec1.swap(vec2)</td><td>swap all the element between the vector</td></tr><tr><td></td><td></td></tr><tr><td>vec.push_back(5)</td><td>push value 5 at the end of the vector</td></tr><tr><td>vec.insert(vec.begin()+i,n)</td><td>insert value n at the index i in vector</td></tr><tr><td></td><td></td></tr><tr><td>vec.pop_back()</td><td>pop the last value from the vector</td></tr><tr><td>vec.erase(vec.begin()+i)</td><td>delete the value stored at the index i in the vector</td></tr><tr><td>vec.erase(vec.begin()+i,vec.begin()+j)</td><td>delete the value stored at the index i to j-1 (here j&gt;i)</td></tr><tr><td>vec.clear()</td><td>delete all the element inside the vector</td></tr><tr><td></td><td></td></tr><tr><td>vec[i]</td><td>accessing value stored at the index i in the vector</td></tr><tr><td>vec.back()</td><td>return the last element of the vector</td></tr><tr><td></td><td></td></tr><tr><td>sort(vec.begin(),vec.end())</td><td>sort the vector in ascending order</td></tr><tr><td>sort(vec.begin(),vec.end(),greater&lt;int&gt;())</td><td>sort the vector in descending order</td></tr><tr><td></td><td></td></tr><tr><td>*max_element(vec.begin(),vec.end())</td><td>return the maximum element from the vec</td></tr><tr><td>*min_element(vec.begin(),vec.end())</td><td>return the minimum element from the vec</td></tr></tbody></table><figcaption>Vector functions</figcaption></figure>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- vector in c++ cheatsheet -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4940545543922013"
+     data-ad-slot="5478640894"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+<p><strong>Different methods for traversing vector &#8211;</strong></p>
+
+
+
+<ol><li><strong>Traversing using size &#8211;</strong>  </li></ol>
+
+
+
+<pre class="wp-block-preformatted">for(int i =0; i &lt; vec.size(); i++){
+cout&lt;&lt;vec[i]&lt;&lt;" ";
+}</pre>
+
+
+
+<p>2. <strong>Traversing vector using iterators</strong> &#8211;</p>
+
+
+
+<pre class="wp-block-preformatted">vector&lt;int> :: iterator v = vec.begin();
+while(v!=vec.end()){
+cout&lt;&lt;*v&lt;&lt;" ";
+v++;
+}</pre>
+
+
+
+<p>3. <strong>Traversing using auto variable </strong>&#8211; </p>
+
+
+
+<pre class="wp-block-preformatted">for(auto i = vec.begin(); i != vec.end(); i++){
+cout&lt;&lt;*i&lt;&lt;" ";
+}</pre>
+
+
+
+<p>4. <strong>Traversing using auto variable (accessing vector in read-only mode) </strong>&#8211; </p>
+
+
+
+<pre class="wp-block-preformatted">for(auto i = vec.cbegin(); i != vec.cend(); i++){
+cout&lt;&lt;*i&lt;&lt;" ";
+}</pre>
+
+
+
+<p>5. <strong>Reverse traversing using auto variable </strong>&#8211; </p>
+
+
+
+<pre class="wp-block-preformatted">for(auto i = vec.rbegin(); i != vec.rend(); i++){
+cout&lt;&lt;*i&lt;&lt;" ";
+}</pre>
+
+
+
+<p><strong>6. Reversing traversing using auto variable (accessing vector in read-only mode)-</strong> </p>
+
+
+
+<pre class="wp-block-preformatted">for(auto i = vec.crbegin(); i != vec.crend(); i++){
+cout&lt;&lt;*i&lt;&lt;" ";
+}</pre>
+
+
+
+<p><strong>7. Using advanced for loop &#8211;</strong> </p>
+
+
+
+<pre class="wp-block-preformatted">for(auto i : vec){
+cout&lt;&lt;i&lt;&lt;" ";
+}</pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

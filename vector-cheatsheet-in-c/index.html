@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head>
+	<meta charset="UTF-8">
+	
+	
+
+<title>Vector Cheatsheet in C++ - CoderUpdate</title>
+<meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+<link rel="canonical" href="https://coderupdate.com/vector-cheatsheet-in-c/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vector Cheatsheet in C++ - CoderUpdate">
+<meta property="og:description" content='Function Use vector&lt;int&gt; vec Declaring a vector vector&lt;int&gt; vec = {1,2,3} Declaring and initializing the vector at the same time vector&lt;vector&lt;int&gt;&gt; v Declaring 2-D vector of int type vec.size() returns the number of element in the vector vec.max_size() returns the maximum number of elements vector can hold vec.capacity() return the size of the storage space ... &lt;a title="Vector Cheatsheet in C++" class="read-more" href="https://coderupdate.com/vector-cheatsheet-in-c/" aria-label="More on Vector Cheatsheet in C++"&gt;Read more&lt;/a&gt;'>
+<meta property="og:url" content="https://coderupdate.com/vector-cheatsheet-in-c/">
+<meta property="og:site_name" content="CoderUpdate">
+<meta property="article:section" content="CheatSheet">
+<meta property="og:updated_time" content="2021-02-15T12:40:46+00:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vector Cheatsheet in C++ - CoderUpdate">
+<meta name="twitter:description" content='Function Use vector&lt;int&gt; vec Declaring a vector vector&lt;int&gt; vec = {1,2,3} Declaring and initializing the vector at the same time vector&lt;vector&lt;int&gt;&gt; v Declaring 2-D vector of int type vec.size() returns the number of element in the vector vec.max_size() returns the maximum number of elements vector can hold vec.capacity() return the size of the storage space ... &lt;a title="Vector Cheatsheet in C++" class="read-more" href="https://coderupdate.com/vector-cheatsheet-in-c/" aria-label="More on Vector Cheatsheet in C++"&gt;Read more&lt;/a&gt;'>
+<script type="application/ld+json" class="rank-math-schema">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": [
+                "Person",
+                "Organization"
+            ],
+            "@id": "https://coderupdate.com/#person",
+            "name": "admin",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://coderupdate.com/wp-content/uploads/2020/12/unnamed-file.png"
+            },
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://coderupdate.com/wp-content/uploads/2020/12/unnamed-file.png"
+            }
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://coderupdate.com/#website",
+            "url": "https://coderupdate.com",
+            "name": "admin",
+            "publisher": {
+                "@id": "https://coderupdate.com/#person"
+            },
+            "inLanguage": "en-US",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://coderupdate.com/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://coderupdate.com/vector-cheatsheet-in-c/#webpage",
+            "url": "https://coderupdate.com/vector-cheatsheet-in-c/",
+            "name": "Vector Cheatsheet in C++ - CoderUpdate",
+            "datePublished": "2021-02-15T12:40:42+00:00",
+            "dateModified": "2021-02-15T12:40:46+00:00",
+            "isPartOf": {
+                "@id": "https://coderupdate.com/#website"
+            },
+            "inLanguage": "en-US"
+        },
+        {
+            "@type": "BlogPosting",
+            "headline": "Vector Cheatsheet in C++ - CoderUpdate",
+            "datePublished": "2021-02-15T12:40:42+00:00",
+            "dateModified": "2021-02-15T12:40:46+00:00",
+            "author": {
+                "@type": "Person",
+                "name": "admin"
+            },
+            "publisher": {
+                "@id": "https://coderupdate.com/#person"
+            },
+            "description": "Different methods for traversing vector -",
+            "@id": "https://coderupdate.com/vector-cheatsheet-in-c/#richSnippet",
+            "isPartOf": {
+                "@id": "https://coderupdate.com/vector-cheatsheet-in-c/#webpage"
+            },
+            "inLanguage": "en-US",
+            "mainEntityOfPage": {
+                "@id": "https://coderupdate.com/vector-cheatsheet-in-c/#webpage"
+            }
+        }
+    ]
+}</script>
+
+
+
+<link rel="alternate" type="application/rss+xml" title="CoderUpdate &raquo; Feed" href="https://coderupdate.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="CoderUpdate &raquo; Comments Feed" href="https://coderupdate.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="CoderUpdate &raquo; Vector Cheatsheet in C++ Comments Feed" href="https://coderupdate.com/vector-cheatsheet-in-c/feed/">
+<link rel="stylesheet" id="bdt-uikit-css" href="https://coderupdate.com/wp-content/plugins/bdthemes-element-pack-lite/assets/css/bdt-uikit.css?ver=3.2" media="all">
+<link rel="stylesheet" id="element-pack-site-css" href="https://coderupdate.com/wp-content/plugins/bdthemes-element-pack-lite/assets/css/element-pack-site.css?ver=2.7.0" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="https://coderupdate.com/wp-includes/css/dist/block-library/style.min.css?ver=5.5.3" media="all">
+<link rel="stylesheet" id="hfe-style-css" href="https://coderupdate.com/wp-content/plugins/header-footer-elementor/assets/css/header-footer-elementor.css?ver=1.5.3" media="all">
+<link rel="stylesheet" id="elementor-icons-css" href="https://coderupdate.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.9.1" media="all">
+<link rel="stylesheet" id="elementor-animations-css" href="https://coderupdate.com/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.0.14" media="all">
+<link rel="stylesheet" id="elementor-frontend-legacy-css" href="https://coderupdate.com/wp-content/plugins/elementor/assets/css/frontend-legacy.min.css?ver=3.0.14" media="all">
+<link rel="stylesheet" id="elementor-frontend-css" href="https://coderupdate.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.0.14" media="all">
+<link rel="stylesheet" id="elementor-post-809-css" href="https://coderupdate.com/wp-content/uploads/elementor/css/post-809.css?ver=1612726841" media="all">
+<link rel="stylesheet" id="lae-animate-styles-css" href="https://coderupdate.com/wp-content/plugins/addons-for-elementor/assets/css/animate.css?ver=4.6" media="all">
+<link rel="stylesheet" id="lae-sliders-styles-css" href="https://coderupdate.com/wp-content/plugins/addons-for-elementor/assets/css/sliders.css?ver=4.6" media="all">
+<link rel="stylesheet" id="lae-icomoon-styles-css" href="https://coderupdate.com/wp-content/plugins/addons-for-elementor/assets/css/icomoon.css?ver=4.6" media="all">
+<link rel="stylesheet" id="lae-frontend-styles-css" href="https://coderupdate.com/wp-content/plugins/addons-for-elementor/assets/css/lae-frontend.css?ver=4.6" media="all">
+<link rel="stylesheet" id="lae-widgets-styles-css" href="https://coderupdate.com/wp-content/plugins/addons-for-elementor/assets/css/lae-widgets.css?ver=4.6" media="all">
+<link rel="stylesheet" id="elementor-pro-css" href="https://coderupdate.com/wp-content/plugins/elementor-pro/assets/css/frontend.min.css?ver=2.10.3" media="all">
+<link rel="stylesheet" id="elementskit-css-widgetarea-control-editor-css" href="https://coderupdate.com/wp-content/plugins/elementskit-lite/modules/controls/assets/css/widgetarea-editor.css?ver=2.1.0" media="all">
+<link rel="stylesheet" id="htbbootstrap-css" href="https://coderupdate.com/wp-content/plugins/ht-mega-for-elementor/assets/css/htbbootstrap.css?ver=1.5.1" media="all">
+<link rel="stylesheet" id="htmega-widgets-css" href="https://coderupdate.com/wp-content/plugins/ht-mega-for-elementor/assets/css/htmega-widgets.css?ver=1.5.1" media="all">
+<link rel="stylesheet" id="font-awesome-css" href="https://coderupdate.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css?ver=4.7.0" media="all">
+<link rel="stylesheet" id="htmega-animation-css" href="https://coderupdate.com/wp-content/plugins/ht-mega-for-elementor/assets/css/animation.css?ver=1.5.1" media="all">
+<link rel="stylesheet" id="htmega-keyframes-css" href="https://coderupdate.com/wp-content/plugins/ht-mega-for-elementor/assets/css/htmega-keyframes.css?ver=1.5.1" media="all">
+<link rel="stylesheet" id="htbuilder-main-css" href="https://coderupdate.com/wp-content/plugins/ht-mega-for-elementor/assets/extensions/ht-builder/css/htbuilder.css?ver=1.5.1" media="all">
+<link rel="stylesheet" id="dashicons-css" href="https://coderupdate.com/wp-includes/css/dashicons.min.css?ver=5.5.3" media="all">
+<link rel="stylesheet" id="generate-widget-areas-css" href="https://coderupdate.com/wp-content/themes/generatepress/assets/css/components/widget-areas.min.css?ver=3.0.2" media="all">
+<link rel="stylesheet" id="generate-style-css" href="https://coderupdate.com/wp-content/themes/generatepress/assets/css/main.min.css?ver=3.0.2" media="all">
+<style id="generate-style-inline-css">
+body{background-color:#f7f8f9;color:#222222;}a{color:#1e73be;}a:hover, a:focus, a:active{color:#000000;}.wp-block-group__inner-container{max-width:1200px;margin-left:auto;margin-right:auto;}.site-header .header-image{width:100px;}body, button, input, select, textarea{font-family:-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";}body{line-height:1.5;}.entry-content > [class*="wp-block-"]:not(:last-child){margin-bottom:1.5em;}.main-navigation .main-nav ul ul li a{font-size:14px;}.sidebar .widget, .footer-widgets .widget{font-size:17px;}@media (max-width:768px){h1{font-size:31px;}h2{font-size:27px;}h3{font-size:24px;}h4{font-size:22px;}h5{font-size:19px;}}.top-bar{background-color:#636363;color:#ffffff;}.top-bar a{color:#ffffff;}.top-bar a:hover{color:#303030;}.site-header{background-color:#ffffff;}.main-title a,.main-title a:hover{color:#222222;}.site-description{color:#757575;}.mobile-menu-control-wrapper .menu-toggle,.mobile-menu-control-wrapper .menu-toggle:hover,.mobile-menu-control-wrapper .menu-toggle:focus,.has-inline-mobile-toggle #site-navigation.toggled{background-color:rgba(0, 0, 0, 0.02);}.main-navigation,.main-navigation ul ul{background-color:#ffffff;}.main-navigation .main-nav ul li a,.menu-toggle, .main-navigation .menu-bar-items{color:#515151;}.main-navigation .main-nav ul li:hover > a,.main-navigation .main-nav ul li:focus > a, .main-navigation .main-nav ul li.sfHover > a, .main-navigation .menu-bar-item:hover > a, .main-navigation .menu-bar-item.sfHover > a{color:#7a8896;background-color:#ffffff;}button.menu-toggle:hover,button.menu-toggle:focus{color:#515151;}.main-navigation .main-nav ul li[class*="current-menu-"] > a{color:#7a8896;background-color:#ffffff;}.main-navigation .main-nav ul li[class*="current-menu-"] > a:hover,.main-navigation .main-nav ul li[class*="current-menu-"].sfHover > a{color:#7a8896;background-color:#ffffff;}.navigation-search input[type="search"],.navigation-search input[type="search"]:active, .navigation-search input[type="search"]:focus, .main-navigation .main-nav ul li.search-item.active > a, .main-navigation .menu-bar-items .search-item.active > a{color:#7a8896;background-color:#ffffff;}.main-navigation ul ul{background-color:#eaeaea;}.main-navigation .main-nav ul ul li a{color:#515151;}.main-navigation .main-nav ul ul li:hover > a,.main-navigation .main-nav ul ul li:focus > a,.main-navigation .main-nav ul ul li.sfHover > a{color:#7a8896;background-color:#eaeaea;}.main-navigation .main-nav ul ul li[class*="current-menu-"] > a{color:#7a8896;background-color:#eaeaea;}.main-navigation .main-nav ul ul li[class*="current-menu-"] > a:hover,.main-navigation .main-nav ul ul li[class*="current-menu-"].sfHover > a{color:#7a8896;background-color:#eaeaea;}.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .one-container .container, .separate-containers .paging-navigation, .inside-page-header{background-color:#ffffff;}.entry-title a{color:#222222;}.entry-title a:hover{color:#55555e;}.entry-meta{color:#595959;}.sidebar .widget{background-color:#ffffff;}.footer-widgets{background-color:#ffffff;}.footer-widgets .widget-title{color:#000000;}.site-info{color:#ffffff;background-color:#55555e;}.site-info a{color:#ffffff;}.site-info a:hover{color:#d3d3d3;}.footer-bar .widget_nav_menu .current-menu-item a{color:#d3d3d3;}input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="tel"],input[type="number"],textarea,select{color:#666666;background-color:#fafafa;border-color:#cccccc;}input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="number"]:focus,textarea:focus,select:focus{color:#666666;background-color:#ffffff;border-color:#bfbfbf;}button,html input[type="button"],input[type="reset"],input[type="submit"],a.button,a.wp-block-button__link:not(.has-background){color:#ffffff;background-color:#55555e;}button:hover,html input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,a.button:hover,button:focus,html input[type="button"]:focus,input[type="reset"]:focus,input[type="submit"]:focus,a.button:focus,a.wp-block-button__link:not(.has-background):active,a.wp-block-button__link:not(.has-background):focus,a.wp-block-button__link:not(.has-background):hover{color:#ffffff;background-color:#3f4047;}a.generate-back-to-top{background-color:rgba( 0,0,0,0.4 );color:#ffffff;}a.generate-back-to-top:hover,a.generate-back-to-top:focus{background-color:rgba( 0,0,0,0.6 );color:#ffffff;}@media (max-width:768px){.main-navigation .menu-bar-item:hover > a, .main-navigation .menu-bar-item.sfHover > a{background:none;color:#515151;}}.nav-below-header .main-navigation .inside-navigation.grid-container, .nav-above-header .main-navigation .inside-navigation.grid-container{padding:0px 20px 0px 20px;}.separate-containers .paging-navigation{padding-top:20px;padding-bottom:20px;}.entry-content .alignwide, body:not(.no-sidebar) .entry-content .alignfull{margin-left:-40px;width:calc(100% + 80px);max-width:calc(100% + 80px);}.rtl .menu-item-has-children .dropdown-menu-toggle{padding-left:20px;}.rtl .main-navigation .main-nav ul li.menu-item-has-children > a{padding-right:20px;}@media (max-width:768px){.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .separate-containers .paging-navigation, .one-container .site-content, .inside-page-header, .wp-block-group__inner-container{padding:30px;}.inside-top-bar{padding-right:30px;padding-left:30px;}.inside-header{padding-right:30px;padding-left:30px;}.widget-area .widget{padding-top:30px;padding-right:30px;padding-bottom:30px;padding-left:30px;}.footer-widgets-container{padding-top:30px;padding-right:30px;padding-bottom:30px;padding-left:30px;}.inside-site-info{padding-right:30px;padding-left:30px;}.entry-content .alignwide, body:not(.no-sidebar) .entry-content .alignfull{margin-left:-30px;width:calc(100% + 60px);max-width:calc(100% + 60px);}.one-container .site-main .paging-navigation{margin-bottom:20px;}}/* End cached CSS */.is-right-sidebar{width:30%;}.is-left-sidebar{width:30%;}.site-content .content-area{width:70%;}@media (max-width:768px){.main-navigation .menu-toggle,.sidebar-nav-mobile:not(#sticky-placeholder){display:block;}.main-navigation ul,.gen-sidebar-nav,.main-navigation:not(.slideout-navigation):not(.toggled) .main-nav > ul,.has-inline-mobile-toggle #site-navigation .inside-navigation > *:not(.navigation-search):not(.main-nav){display:none;}.nav-align-right .inside-navigation,.nav-align-center .inside-navigation{justify-content:space-between;}.has-inline-mobile-toggle .mobile-menu-control-wrapper{display:flex;flex-wrap:wrap;}.has-inline-mobile-toggle .inside-header{flex-direction:row;text-align:left;flex-wrap:wrap;}.has-inline-mobile-toggle .header-widget,.has-inline-mobile-toggle #site-navigation{flex-basis:100%;}.nav-float-left .has-inline-mobile-toggle #site-navigation{order:10;}}
+.elementor-template-full-width .site-content{display:block;}
+</style>
+<link rel="stylesheet" id="pscrollbar-css" href="https://coderupdate.com/wp-content/plugins/quadmenu/assets/frontend/pscrollbar/perfect-scrollbar.min.css?ver=2.0.6" media="all">
+<link rel="stylesheet" id="owlcarousel-css" href="https://coderupdate.com/wp-content/plugins/quadmenu/assets/frontend/owlcarousel/owl.carousel.min.css?ver=2.0.6" media="all">
+<link rel="stylesheet" id="quadmenu-normalize-css" href="https://coderupdate.com/wp-content/plugins/quadmenu/assets/frontend/css/quadmenu-normalize.min.css?ver=2.0.6" media="all">
+<link rel="stylesheet" id="quadmenu-widgets-css" href="https://coderupdate.com/wp-content/uploads/generatepress/quadmenu-widgets.css?ver=1613396552" media="all">
+<link rel="stylesheet" id="quadmenu-css" href="https://coderupdate.com/wp-content/plugins/quadmenu/assets/frontend/css/quadmenu.min.css?ver=2.0.6" media="all">
+<link rel="stylesheet" id="quadmenu-locations-css" href="https://coderupdate.com/wp-content/uploads/generatepress/quadmenu-locations.css?ver=1613396552" media="all">
+<link rel="stylesheet" id="elementor-post-286-css" href="https://coderupdate.com/wp-content/uploads/elementor/css/post-286.css?ver=1612790330" media="all">
+<link rel="stylesheet" id="hfe-widgets-style-css" href="https://coderupdate.com/wp-content/plugins/header-footer-elementor/inc/widgets-css/frontend.css?ver=1.5.3" media="all">
+<link rel="stylesheet" id="elementor-post-577-css" href="https://coderupdate.com/wp-content/uploads/elementor/css/post-577.css?ver=1612726842" media="all">
+<link rel="stylesheet" id="elementor-post-847-css" href="https://coderupdate.com/wp-content/uploads/elementor/css/post-847.css?ver=1613492108" media="all">
+<link rel="stylesheet" id="elementor-icons-ekiticons-css" href="https://coderupdate.com/wp-content/plugins/elementskit-lite/modules/controls/assets/css/ekiticons.css?ver=5.9.0" media="all">
+<link rel="stylesheet" id="htmega-menu-css" href="https://coderupdate.com/wp-content/plugins/ht-mega-for-elementor/assets/extensions/ht-menu/css/mega-menu-style.css?ver=1.5.1" media="all">
+<style id="htmega-menu-inline-css">
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+</style>
+<link rel="stylesheet" id="ekit-widget-styles-css" href="https://coderupdate.com/wp-content/plugins/elementskit-lite/widgets/init/assets/css/widget-styles.css?ver=2.1.0" media="all">
+<link rel="stylesheet" id="ekit-responsive-css" href="https://coderupdate.com/wp-content/plugins/elementskit-lite/widgets/init/assets/css/responsive.css?ver=2.1.0" media="all">
+<link rel="stylesheet" id="jltma-bootstrap-css" href="https://coderupdate.com/wp-content/plugins/master-addons/assets/css/bootstrap.min.css?ver=5.5.3" media="all">
+<link rel="stylesheet" id="master-addons-main-style-css" href="https://coderupdate.com/wp-content/plugins/master-addons/assets/css/master-addons-styles.css?ver=5.5.3" media="all">
+<link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;ver=5.5.3" media="all">
+<link rel="stylesheet" id="elementor-icons-shared-0-css" href="https://coderupdate.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.12.0" media="all">
+<link rel="stylesheet" id="elementor-icons-fa-solid-css" href="https://coderupdate.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.12.0" media="all">
+<script id="jquery-core-js-before">
+/* < ![CDATA[ */
+function jltmaNS(n){for(var e=n.split("."),a=window,i="",r=e.length,t=0;r>t;t++)"window"!=e[t]&&(i=e[t],a[i]=a[i]||{},a=a[i]);return a;}
+/* ]]> */
+</script>
+<script src="https://coderupdate.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp" id="jquery-core-js"></script>
+<script src="https://coderupdate.com/wp-content/plugins/ht-mega-for-elementor/assets/extensions/ht-menu/js/htmegamenu-main.js?ver=5.5.3" id="htmegamenu-main-js"></script>
+<link rel="alternate" type="application/json" href="https://coderupdate.com/wp-json/wp/v2/posts/826">
+
+
+<link rel="alternate" type="application/json+oembed" href="https://coderupdate.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcoderupdate.com%2Fvector-cheatsheet-in-c%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://coderupdate.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcoderupdate.com%2Fvector-cheatsheet-in-c%2F&amp;format=xml">
+        <script type="text/javascript">
+            (function () {
+                window.lae_fs = {can_use_premium_code: false};
+            })();
+        </script>
+        <script data-ad-client="ca-pub-4940545543922013" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>		<script type="text/javascript">
+            (function () {
+                window.ma_el_fs = { can_use_premium_code: false};
+            })();
+		</script>
+		<style id="mystickymenu" type="text/css">#mysticky-nav { width:100%; position: static; }#mysticky-nav.wrapfixed { position:fixed; left: 0px; margin-top:0px;  z-index: 99990; -webkit-transition: 0.3s; -moz-transition: 0.3s; -o-transition: 0.3s; transition: 0.3s; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; filter: alpha(opacity=90); opacity:0.9; background-color: #f7f5e7;}#mysticky-nav.wrapfixed .myfixed{ background-color: #f7f5e7; position: relative;top: auto;left: auto;right: auto;}#mysticky-nav .myfixed { margin:0 auto; float:none; border:0px; background:none; max-width:100%; }</style>			<style type="text/css">
+																															</style>
+					<script>
+			document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );
+		</script>
+				<style>
+			.no-js img.lazyload { display: none; }
+			figure.wp-block-image img.lazyloading { min-width: 150px; }
+							.lazyload, .lazyloading { opacity: 0; }
+				.lazyloaded {
+					opacity: 1;
+					transition: opacity 400ms;
+					transition-delay: 0ms;
+				}
+					</style>
+		
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="https://coderupdate.com/wp-content/uploads/2020/11/cropped-cover-2-32x32.png" sizes="32x32">
+<link rel="icon" href="https://coderupdate.com/wp-content/uploads/2020/11/cropped-cover-2-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://coderupdate.com/wp-content/uploads/2020/11/cropped-cover-2-180x180.png">
+<meta name="msapplication-TileImage" content="https://coderupdate.com/wp-content/uploads/2020/11/cropped-cover-2-270x270.png">
+		<style id="wp-custom-css">
+			html {
+  scroll-behavior: smooth;
+}		</style>
+		<style type="text/css">/** Mega Menu CSS: fs **/</style>
+	
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K6XBMBQGMW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-K6XBMBQGMW');
+</script>
+</head>
+
+<body class="post-template-default single single-post postid-826 single-format-standard wp-custom-logo wp-embed-responsive ehf-template-generatepress ehf-stylesheet-generatepress right-sidebar nav-float-right separate-containers header-aligned-left dropdown-hover elementor-page-294 elementor-page-847 elementor-page-777 elementor-default elementor-template-full-width elementor-kit-809 full-width-content" itemtype="https://schema.org/Blog" itemscope>
+	<a class="screen-reader-text skip-link" href="#content" title="Skip to content">Skip to content</a>		<div data-elementor-type="header" data-elementor-id="286" class="elementor elementor-286 elementor-location-header" data-elementor-settings="[]">
+		<div class="elementor-inner">
+			<div class="elementor-section-wrap">
+						<header class="has_ma_el_bg_slider elementor-section elementor-top-section elementor-element elementor-element-3f1f62c9 elementor-section-full_width elementor-section-stretched elementor-section-height-default elementor-section-height-default" data-id="3f1f62c9" data-element_type="section" data-settings='{"background_background":"classic","sticky":"top","stretch_section":"section-stretched","ekit_has_onepagescroll_dot":"yes","sticky_on":["desktop","tablet","mobile"],"sticky_offset":0,"sticky_effects_offset":0}'>
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="has_ma_el_bg_slider elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-db32c94" data-id="db32c94" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-2d880b47 elementor-view-default elementor-widget elementor-widget-icon" data-id="2d880b47" data-element_type="widget" data-widget_type="icon.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-wrapper">
+			<a class="elementor-icon" href="https://coderupdate.com/">
+			<svg xmlns="http://www.w3.org/2000/svg" width="615.000000pt" height="406.000000pt" viewbox="0 0 615.000000 406.000000" preserveaspectratio="xMidYMid meet"><g transform="translate(0.000000,406.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none"><path d="M939 3934 c-25 -14 -54 -40 -65 -57 -18 -31 -19 -67 -19 -1323 l0 -1290 28 -42 c15 -23 45 -51 67 -62 39 -20 52 -20 2139 -20 1459 0 2108 3 2128 11 34 13 80 55 99 91 12 23 14 226 14 1316 l0 1289 -22 33 c-13 19 -43 44 -67 57 l-44 23 -2106 0 -2106 0 -46 -26z m4171 -1384 l0 -1180 -2015 0 -2016 0 1 1174 c1 646 4 1177 7 1180 4 3 910 6 2015 6 l2008 0 0 -1180z"></path><path d="M894 1040 c-42 -21 -100 -69 -199 -165 -77 -75 -151 -143 -165 -150 -14 -8 -69 -59 -123 -113 -54 -55 -134 -128 -177 -163 l-79 -64 0 -102 c-1 -101 -1 -103 31 -139 18 -20 47 -43 65 -50 27 -12 505 -14 2846 -14 l2813 0 44 23 c59 30 79 72 86 178 l6 84 -34 32 c-52 51 -311 289 -417 384 -53 47 -130 119 -171 160 -41 41 -97 86 -125 100 l-50 24 -2146 3 -2146 2 -59 -30z m3010 -442 c35 -56 76 -136 76 -150 0 -4 -400 -8 -890 -8 -593 0 -890 3 -890 10 0 9 90 159 113 188 7 9 176 12 783 12 l774 0 34 -52z m-396 -261 c2 -23 -3 -48 -13 -63 l-15 -24 -385 0 -384 0 -15 22 c-16 23 -22 89 -9 101 4 4 189 6 412 5 l406 -3 3 -38z"></path></g></svg>			</a>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="has_ma_el_bg_slider elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-5fc8988a" data-id="5fc8988a" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-2bce2d1d hfe-nav-menu__align-right hfe-nav-menu__breakpoint-none elementor-hidden-desktop hfe-submenu-icon-arrow hfe-submenu-animation-none elementor-widget elementor-widget-navigation-menu" data-id="2bce2d1d" data-element_type="widget" data-widget_type="navigation-menu.default">
+				<div class="elementor-widget-container">
+						<div class="hfe-nav-menu hfe-layout-horizontal hfe-nav-menu-layout horizontal hfe-pointer__none" data-layout="horizontal">
+				<div class="hfe-nav-menu__toggle elementor-clickable">
+					<div class="hfe-nav-menu-icon">
+											</div>
+				</div>
+				<nav class="hfe-nav-menu__layout-horizontal hfe-nav-menu__submenu-arrow" data-toggle-icon="" data-close-icon="" data-full-width=""><ul id="menu-1-2bce2d1d" class="hfe-nav-menu"><li id="menu-item-437" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="https://coderupdate.com/blog/" class="hfe-menu-item">Blog</a></li>
+<li id="menu-item-716" class="menu-item menu-item-type-custom menu-item-object-custom parent hfe-creative-menu"><a href="https://coderupdate.com/installation-guide-for-c-and-c/" class="hfe-menu-item">Code</a></li>
+</ul></nav>              
+			</div>
+					</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="has_ma_el_bg_slider elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-1518c330" data-id="1518c330" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-15ae935b hfe-menu-item-center elementor-hidden-desktop hfe-menu-item-space-between hfe-submenu-icon-arrow elementor-widget elementor-widget-navigation-menu" data-id="15ae935b" data-element_type="widget" data-widget_type="navigation-menu.default">
+				<div class="elementor-widget-container">
+						<div class="hfe-nav-menu hfe-layout-expandible hfe-nav-menu-layout expandible" data-layout="expandible">
+				<div class="hfe-nav-menu__toggle elementor-clickable">
+					<div class="hfe-nav-menu-icon">
+						<i aria-hidden="true" tabindex="0" class="fas fa-angle-down"></i>					</div>
+				</div>
+				<nav class="hfe-dropdown-expandible hfe-nav-menu__layout-expandible hfe-nav-menu__submenu-arrow" data-toggle-icon='&lt;i aria-hidden="true" tabindex="0" class="fas fa-angle-down"&gt;&lt;/i&gt;' data-close-icon='&lt;i aria-hidden="true" tabindex="0" class="fas fa-angle-up"&gt;&lt;/i&gt;' data-full-width="yes"><ul id="menu-1-15ae935b" class="hfe-nav-menu"><li id="menu-item-512" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="https://coderupdate.com/contact-us/" class="hfe-menu-item">Contact Us</a></li>
+<li id="menu-item-511" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="https://coderupdate.com/about-us/" class="hfe-menu-item">About Us</a></li>
+</ul></nav>              
+			</div>
+					</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="has_ma_el_bg_slider elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-601ef93c elementor-hidden-tablet elementor-hidden-phone" data-id="601ef93c" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-60fe9933 hfe-nav-menu__align-right hfe-nav-menu__breakpoint-none hfe-submenu-icon-arrow hfe-submenu-animation-none elementor-widget elementor-widget-navigation-menu" data-id="60fe9933" data-element_type="widget" data-widget_type="navigation-menu.default">
+				<div class="elementor-widget-container">
+						<div class="hfe-nav-menu hfe-layout-horizontal hfe-nav-menu-layout horizontal hfe-pointer__none" data-layout="horizontal">
+				<div class="hfe-nav-menu__toggle elementor-clickable">
+					<div class="hfe-nav-menu-icon">
+											</div>
+				</div>
+				<nav class="hfe-nav-menu__layout-horizontal hfe-nav-menu__submenu-arrow" data-toggle-icon="" data-close-icon="" data-full-width=""><ul id="menu-1-60fe9933" class="hfe-nav-menu"><li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="https://coderupdate.com/blog/" class="hfe-menu-item">Blog</a></li>
+<li id="menu-item-684" class="menu-item menu-item-type-custom menu-item-object-custom parent hfe-creative-menu"><a href="https://coderupdate.com/installation-guide-for-c-and-c/" class="hfe-menu-item">Code</a></li>
+<li id="menu-item-871" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item parent hfe-creative-menu"><a href="https://coderupdate.com/vector-cheatsheet-in-c/" class="hfe-menu-item">CheatSheets</a></li>
+<li id="menu-item-62" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="https://coderupdate.com/contact-us/" class="hfe-menu-item">Contact Us</a></li>
+<li id="menu-item-63" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="https://coderupdate.com/about-us/" class="hfe-menu-item">About Us</a></li>
+<li id="menu-item-195" class="menu-item menu-item-type-custom menu-item-object-custom parent hfe-creative-menu"><a href="https://typingchamps.com/" class="hfe-menu-item">Typing Test</a></li>
+</ul></nav>              
+			</div>
+					</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</header>
+					</div>
+		</div>
+		</div>
+		
+	<div id="page" class="site grid-container container hfeed">
+				<div id="content" class="site-content">
+					<div data-elementor-type="single" data-elementor-id="847" class="elementor elementor-847 elementor-location-single post-826 post type-post status-publish format-standard hentry category-cheatsheet" data-elementor-settings="[]">
+		<div class="elementor-inner">
+			<div class="elementor-section-wrap">
+						<section class="has_ma_el_bg_slider elementor-section elementor-top-section elementor-element elementor-element-2ca92541 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="2ca92541" data-element_type="section" data-settings='{"ekit_has_onepagescroll_dot":"yes"}'>
+						<div class="elementor-container elementor-column-gap-extended">
+							<div class="elementor-row">
+					<div class="has_ma_el_bg_slider elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-1adb56a5 elementor-hidden-tablet elementor-hidden-phone" data-id="1adb56a5" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-1b0394f5 hfe-nav-menu__align-justify hfe-nav-menu__breakpoint-none hfe-submenu-icon-arrow elementor-widget elementor-widget-navigation-menu" data-id="1b0394f5" data-element_type="widget" data-settings='{"sticky":"top","sticky_on":["desktop"],"sticky_offset":69,"sticky_parent":"yes","sticky_effects_offset":0}' data-widget_type="navigation-menu.default">
+				<div class="elementor-widget-container">
+						<div class="hfe-nav-menu hfe-layout-vertical hfe-nav-menu-layout vertical" data-layout="vertical">
+				<div class="hfe-nav-menu__toggle elementor-clickable">
+					<div class="hfe-nav-menu-icon">
+											</div>
+				</div>
+				<nav class="hfe-nav-menu__layout-vertical hfe-nav-menu__submenu-arrow" data-toggle-icon="" data-close-icon="" data-full-width=""><ul id="menu-1-1b0394f5" class="hfe-nav-menu"><li id="menu-item-842" class="menu-item menu-item-type-post_type menu-item-object-post current-menu-item parent hfe-creative-menu"><a href="https://coderupdate.com/vector-cheatsheet-in-c/" class="hfe-menu-item">Vector Cheatsheet in C++</a></li>
+</ul></nav>              
+			</div>
+					</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="has_ma_el_bg_slider elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-3ebaab4c" data-id="3ebaab4c" data-element_type="column" data-settings='{"background_background":"classic"}'>
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-d1f2292 elementor-widget elementor-widget-html" data-id="d1f2292" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4940545543922013" data-ad-slot="6593731269" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>		</div>
+				</div>
+				<div class="elementor-element elementor-element-13146494 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-id="13146494" data-element_type="widget" data-widget_type="theme-post-title.default">
+				<div class="elementor-widget-container">
+			<h1 class="elementor-heading-title elementor-size-default">Vector Cheatsheet in C++</h1>		</div>
+				</div>
+				<div class="elementor-element elementor-element-b83367e elementor-widget elementor-widget-theme-post-content" data-id="b83367e" data-element_type="widget" data-widget_type="theme-post-content.default">
+				<div class="elementor-widget-container">
+			
+<figure class="wp-block-table"><table><tbody><tr><td><strong>Function</strong></td><td><strong>Use</strong></td></tr><tr><td>vector&lt;int&gt; vec</td><td>Declaring a vector</td></tr><tr><td>vector&lt;int&gt; vec = {1,2,3}</td><td>Declaring and initializing the vector at the same time</td></tr><tr><td></td><td></td></tr><tr><td>vector&lt;vector&lt;int&gt;&gt; v</td><td>Declaring 2-D vector of int type</td></tr><tr><td></td><td></td></tr><tr><td>vec.size()</td><td>returns the number of element in the vector</td></tr><tr><td>vec.max_size()</td><td>returns the maximum number of elements vector can hold</td></tr><tr><td>vec.capacity()</td><td>return the size of the storage space currently allocated to the vector expressed as the number of elements</td></tr><tr><td>vec.resize(n)</td><td>&nbsp;resize the current vector so that it contains n element (will delete all the element after the size n)</td></tr><tr><td>vec.empty()</td><td>return 1 if vec is empty else 0</td></tr><tr><td>vec.shrink_to_fit()</td><td>reduce the capacity of vector to fits the size</td></tr><tr><td>vec.reserve(n)</td><td>vector size changed to 100</td></tr><tr><td></td><td></td></tr><tr><td>vec1.swap(vec2)</td><td>swap all the element between the vector</td></tr><tr><td></td><td></td></tr><tr><td>vec.push_back(5)</td><td>push value 5 at the end of the vector</td></tr><tr><td>vec.insert(vec.begin()+i,n)</td><td>insert value n at the index i in vector</td></tr><tr><td></td><td></td></tr><tr><td>vec.pop_back()</td><td>pop the last value from the vector</td></tr><tr><td>vec.erase(vec.begin()+i)</td><td>delete the value stored at the index i in the vector</td></tr><tr><td>vec.erase(vec.begin()+i,vec.begin()+j)</td><td>delete the value stored at the index i to j-1 (here j&gt;i)</td></tr><tr><td>vec.clear()</td><td>delete all the element inside the vector</td></tr><tr><td></td><td></td></tr><tr><td>vec[i]</td><td>accessing value stored at the index i in the vector</td></tr><tr><td>vec.back()</td><td>return the last element of the vector</td></tr><tr><td></td><td></td></tr><tr><td>sort(vec.begin(),vec.end())</td><td>sort the vector in ascending order</td></tr><tr><td>sort(vec.begin(),vec.end(),greater&lt;int&gt;())</td><td>sort the vector in descending order</td></tr><tr><td></td><td></td></tr><tr><td>*max_element(vec.begin(),vec.end())</td><td>return the maximum element from the vec</td></tr><tr><td>*min_element(vec.begin(),vec.end())</td><td>return the minimum element from the vec</td></tr></tbody></table><figcaption>Vector functions</figcaption></figure>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4940545543922013" data-ad-slot="5478640894" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+<p><strong>Different methods for traversing vector &ndash;</strong></p>
+
+
+
+<ol><li><strong>Traversing using size &ndash;</strong>  </li></ol>
+
+
+
+<pre class="wp-block-preformatted">for(int i =0; i &lt; vec.size(); i++){
+cout&lt;&lt;vec[i]&lt;&lt;" ";
+}</pre>
+
+
+
+<p>2. <strong>Traversing vector using iterators</strong> &ndash;</p>
+
+
+
+<pre class="wp-block-preformatted">vector&lt;int&gt; :: iterator v = vec.begin();
+while(v!=vec.end()){
+cout&lt;&lt;*v&lt;&lt;" ";
+v++;
+}</pre>
+
+
+
+<p>3. <strong>Traversing using auto variable </strong>&ndash; </p>
+
+
+
+<pre class="wp-block-preformatted">for(auto i = vec.begin(); i != vec.end(); i++){
+cout&lt;&lt;*i&lt;&lt;" ";
+}</pre>
+
+
+
+<p>4. <strong>Traversing using auto variable (accessing vector in read-only mode) </strong>&ndash; </p>
+
+
+
+<pre class="wp-block-preformatted">for(auto i = vec.cbegin(); i != vec.cend(); i++){
+cout&lt;&lt;*i&lt;&lt;" ";
+}</pre>
+
+
+
+<p>5. <strong>Reverse traversing using auto variable </strong>&ndash; </p>
+
+
+
+<pre class="wp-block-preformatted">for(auto i = vec.rbegin(); i != vec.rend(); i++){
+cout&lt;&lt;*i&lt;&lt;" ";
+}</pre>
+
+
+
+<p><strong>6. Reversing traversing using auto variable (accessing vector in read-only mode)-</strong> </p>
+
+
+
+<pre class="wp-block-preformatted">for(auto i = vec.crbegin(); i != vec.crend(); i++){
+cout&lt;&lt;*i&lt;&lt;" ";
+}</pre>
+
+
+
+<p><strong>7. Using advanced for loop &ndash;</strong> </p>
+
+
+
+<pre class="wp-block-preformatted">for(auto i : vec){
+cout&lt;&lt;i&lt;&lt;" ";
+}</pre>
+		</div>
+				</div>
+				<section class="has_ma_el_bg_slider elementor-section elementor-inner-section elementor-element elementor-element-1490f16f elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="1490f16f" data-element_type="section" data-settings='{"ekit_has_onepagescroll_dot":"yes"}'>
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="has_ma_el_bg_slider elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-541afb1c" data-id="541afb1c" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-51224614 elementor-widget elementor-widget-html" data-id="51224614" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4940545543922013" data-ad-slot="8747097799" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="has_ma_el_bg_slider elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-4f19ae44" data-id="4f19ae44" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-5095ca09 elementor-widget elementor-widget-html" data-id="5095ca09" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4940545543922013" data-ad-slot="4523769994" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<div class="elementor-element elementor-element-4aea3d79 elementor-post-navigation-borders-yes elementor-widget elementor-widget-post-navigation" data-id="4aea3d79" data-element_type="widget" data-widget_type="post-navigation.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-post-navigation elementor-grid">
+			<div class="elementor-post-navigation__prev elementor-post-navigation__link">
+				<a href="https://coderupdate.com/operators-in-c/" rel="prev"><span class="post-navigation__arrow-wrapper post-navigation__arrow-prev"><i class="fa fa-chevron-left" aria-hidden="true"></i><span class="elementor-screen-only">Prev</span></span><span class="elementor-post-navigation__link__prev"><span class="post-navigation__prev--title">Operators in C</span></span></a>			</div>
+							<div class="elementor-post-navigation__separator-wrapper">
+					<div class="elementor-post-navigation__separator"></div>
+				</div>
+						<div class="elementor-post-navigation__next elementor-post-navigation__link">
+							</div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="has_ma_el_bg_slider elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-1e3b84ba" data-id="1e3b84ba" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-782a6c40 hfe-search-layout-icon elementor-widget elementor-widget-hfe-search-button" data-id="782a6c40" data-element_type="widget" data-widget_type="hfe-search-button.default">
+				<div class="elementor-widget-container">
+					<form class="hfe-search-button-wrapper" role="search" action="https://coderupdate.com" method="get">
+						<div class="hfe-search-icon-toggle">
+				<input placeholder="" class="hfe-search-form__input" type="search" name="s" title="Search" value="">
+				<i class="fas fa-search" aria-hidden="true"></i>
+			</div>
+					</form>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-10ee28f5 elementor-hidden-tablet elementor-hidden-phone elementor-widget elementor-widget-html" data-id="10ee28f5" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4940545543922013" data-ad-slot="9570414240" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>		</div>
+				</div>
+				<div class="elementor-element elementor-element-7c5a277 elementor-hidden-tablet elementor-hidden-phone elementor-widget elementor-widget-html" data-id="7c5a277" data-element_type="widget" data-settings='{"sticky_on":["desktop"],"sticky_offset":69,"sticky_parent":"yes","sticky":"top","sticky_effects_offset":0}' data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4940545543922013" data-ad-slot="8961708457" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+					</div>
+		</div>
+		</div>
+		
+	</div>
+</div>
+
+
+<div class="site-footer">
+			<div data-elementor-type="footer" data-elementor-id="577" class="elementor elementor-577 elementor-location-footer" data-elementor-settings="[]">
+		<div class="elementor-inner">
+			<div class="elementor-section-wrap">
+						<section class="has_ma_el_bg_slider elementor-section elementor-top-section elementor-element elementor-element-9292907 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="9292907" data-element_type="section" data-settings='{"background_background":"classic","ekit_has_onepagescroll_dot":"yes"}'>
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="has_ma_el_bg_slider elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2f4cc5d2" data-id="2f4cc5d2" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-3aee6606 elementor-widget elementor-widget-copyright" data-id="3aee6606" data-element_type="widget" data-widget_type="copyright.default">
+				<div class="elementor-widget-container">
+					<div class="hfe-copyright-wrapper">
+							<span>Copyright &copy; 2021 CoderUpdate</span>
+					</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+					</div>
+		</div>
+		</div>
+		</div>
+
+<script src="https://coderupdate.com/wp-content/plugins/mystickymenu/js/detectmobilebrowser.js?ver=2.4.9" id="detectmobilebrowser-js"></script>
+<script id="mystickymenu-js-extra">
+var option = {"mystickyClass":"nav.main-navigation","activationHeight":"0","disableWidth":"0","disableLargeWidth":"0","adminBar":"false","device_desktop":"1","device_mobile":"1","mystickyTransition":"fade","mysticky_disable_down":"false"};
+</script>
+<script src="https://coderupdate.com/wp-content/plugins/mystickymenu/js/mystickymenu.min.js?ver=2.4.9" id="mystickymenu-js"></script>
+<script src="https://coderupdate.com/wp-content/plugins/ht-mega-for-elementor/assets/js/popper.min.js?ver=1.5.1" id="htmega-popper-js"></script>
+<script src="https://coderupdate.com/wp-content/plugins/ht-mega-for-elementor/assets/js/htbbootstrap.js?ver=1.5.1" id="htbbootstrap-js"></script>
+<script src="https://coderupdate.com/wp-content/plugins/ht-mega-for-elementor/assets/js/waypoints.js?ver=1.5.1" id="waypoints-js"></script>
+<script src="https://coderupdate.com/wp-includes/js/imagesloaded.min.js?ver=4.1.4" id="imagesloaded-js"></script>
+<script src="https://coderupdate.com/wp-includes/js/masonry.min.js?ver=4.2.2" id="masonry-js"></script>
+<script src="https://coderupdate.com/wp-content/plugins/ht-mega-for-elementor/assets/extensions/ht-builder/js/htbuilder.js?ver=1.5.1" id="htbuilder-main-js"></script>
+<script src="https://coderupdate.com/wp-content/plugins/wp-smushit/app/assets/js/smush-lazy-load.min.js?ver=3.8.2" id="smush-lazy-load-js"></script>
+
+<script id="generate-main-js-extra">
+var generatepressMenu = {"toggleOpenedSubMenus":"1","openSubMenuLabel":"Open Sub-Menu","closeSubMenuLabel":"Close Sub-Menu"};
+</script>
+<script src="https://coderupdate.com/wp-content/themes/generatepress/assets/js/main.min.js?ver=3.0.2" id="generate-main-js"></script>
+<script src="https://coderupdate.com/wp-content/plugins/quadmenu/assets/frontend/pscrollbar/perfect-scrollbar.jquery.min.js?ver=2.0.6" id="pscrollbar-js"></script>
+<script src="https://coderupdate.com/wp-content/plugins/quadmenu/assets/frontend/owlcarousel/owl.carousel.min.js?ver=2.0.6" id="owlcarousel-js"></script>
+<script src="https://coderupdate.com/wp-includes/js/hoverIntent.min.js?ver=1.8.1" id="hoverIntent-js"></script>
+<script id="quadmenu-js-extra">
+var quadmenu = {"nonce":"db059b4a2b","gutter":"30"};
+var ajaxurl = "https:\/\/coderupdate.com\/wp-admin\/admin-ajax.php";
+</script>
+<script src="https://coderupdate.com/wp-content/plugins/quadmenu/assets/frontend/js/quadmenu.min.js?ver=2.0.6" id="quadmenu-js"></script>
+<script src="https://coderupdate.com/wp-content/plugins/elementskit-lite/libs/framework/assets/js/frontend-script.js?ver=2.1.0" id="elementskit-framework-js-frontend-js"></script>
+<script id="elementskit-framework-js-frontend-js-after">
+
+		var elementskit = {
+            resturl: 'https://coderupdate.com/wp-json/elementskit/v1/',
+        }
+
+		
+</script>
+<script src="https://coderupdate.com/wp-content/plugins/elementskit-lite/widgets/init/assets/js/widget-scripts.js?ver=2.1.0" id="ekit-widget-scripts-js"></script>
+<script src="https://coderupdate.com/wp-content/plugins/master-addons/assets/js/plugins.js?ver=1.5.6.2" id="master-addons-plugins-js"></script>
+<script id="master-addons-scripts-js-extra">
+var jltma_scripts = {"plugin_url":"https:\/\/coderupdate.com\/wp-content\/plugins\/master-addons","ajaxurl":"https:\/\/coderupdate.com\/wp-admin\/admin-ajax.php","nonce":"master-addons-elementor"};
+</script>
+<script src="https://coderupdate.com/wp-content/plugins/master-addons/assets/js/master-addons-scripts.js?ver=1.5.6.2" id="master-addons-scripts-js"></script>
+<script id="megamenu-js-extra">
+var megamenu = {"timeout":"300","interval":"100"};
+</script>
+<script src="https://coderupdate.com/wp-content/plugins/megamenu/js/maxmegamenu.js?ver=2.9.2" id="megamenu-js"></script>
+<script src="https://coderupdate.com/wp-content/plugins/header-footer-elementor/inc/js/frontend.js?ver=1.5.3" id="hfe-frontend-js-js"></script>
+<script id="bdt-uikit-js-extra">
+var element_pack_ajax_login_config = {"ajaxurl":"https:\/\/coderupdate.com\/wp-admin\/admin-ajax.php","loadingmessage":"Sending user info, please wait..."};
+var ElementPackConfig = {"ajaxurl":"https:\/\/coderupdate.com\/wp-admin\/admin-ajax.php","nonce":"c25c2fcb02","contact_form":{"sending_msg":"Sending message please wait...","captcha_nd":"Invisible captcha not defined!","captcha_nr":"Could not get invisible captcha response!"},"elements_data":{"sections":[],"columns":[],"widgets":[]}};
+</script>
+<script src="https://coderupdate.com/wp-content/plugins/bdthemes-element-pack-lite/assets/js/bdt-uikit.min.js?ver=2.7.0" id="bdt-uikit-js"></script>
+<script src="https://coderupdate.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.0.14" id="elementor-frontend-modules-js"></script>
+<script src="https://coderupdate.com/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4" id="jquery-ui-position-js"></script>
+<script src="https://coderupdate.com/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.8.1" id="elementor-dialog-js"></script>
+<script src="https://coderupdate.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2" id="elementor-waypoints-js"></script>
+<script src="https://coderupdate.com/wp-content/plugins/ht-mega-for-elementor/assets/js/swiper.min.js?ver=1.5.1" id="swiper-js"></script>
+<script src="https://coderupdate.com/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.0.14" id="share-link-js"></script>
+<script id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"3.0.14","is_static":false,"legacyMode":{"elementWrappers":true},"urls":{"assets":"https:\/\/coderupdate.com\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":826,"title":"Vector%20Cheatsheet%20in%20C%2B%2B%20-%20CoderUpdate","excerpt":"","featuredImage":false}};
+</script>
+<script src="https://coderupdate.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.0.14" id="elementor-frontend-js"></script>
+<script src="https://coderupdate.com/wp-content/plugins/bdthemes-element-pack-lite/assets/js/element-pack-site.min.js?ver=2.7.0" id="element-pack-site-js"></script>
+<script src="https://coderupdate.com/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=2.10.3" id="elementor-sticky-js"></script>
+<script id="elementor-pro-frontend-js-before">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/coderupdate.com\/wp-admin\/admin-ajax.php","nonce":"14c2609f92","i18n":{"toc_no_headings_found":"No headings were found on this page."},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"delicious":{"title":"Delicious"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/coderupdate.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+</script>
+<script src="https://coderupdate.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=2.10.3" id="elementor-pro-frontend-js"></script>
+<script src="https://coderupdate.com/wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor.js?ver=2.1.0" id="elementskit-elementor-js"></script>
+<script src="https://coderupdate.com/wp-content/plugins/elementskit-lite/modules/controls/assets/js/widgetarea-editor.js?ver=2.1.0" id="elementskit-js-widgetarea-control-editor-js"></script>
+
+</body>
+</html>
